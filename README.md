@@ -1,4 +1,4 @@
-## My Web Application (Title)
+## My Web Application (Team14 App)
 
 * [General info](#general-info)
 * [Technologies](#technologies)
