@@ -42,5 +42,7 @@ Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
+
 Name: Guang Yang
 File: Empty file
+Goodafternoon! - from samuel
