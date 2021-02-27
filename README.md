@@ -44,5 +44,7 @@ Tips for file naming files and folders:
 
 
 Name: Guang Yang
-File: Empty file
-Goodafternoon! - from samuel
+File: profile.file
+
+Name: Samuel Cheon
+File: sort.html
