@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
+    <title>Parks in Burnaby </title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -11,48 +11,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Optional styles and scripts of your own -->
+    <style>
+		body {
 
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		.search {
+			width: 100%;
+			position: relative;
+			display: flex;
+		}
+
+		.searchTerm {
+			width: 100%;
+			border: 3px solid yellow;
+			border-right: none;
+			padding: 5px;
+			height: 40px;
+			border-radius: 5px 0 0 5px;
+			outline: none;
+			color: #9DBFAF;
+		}
+
+		.searchTerm:focus {
+			color: yellow;
+		}
+
+		.searchButton {
+			width: 40px;
+			height: 36px;
+			border: 1px solid yellow;
+			background: yellow;
+			text-align: center;
+			color: green;
+			border-radius: 0 5px 5px 0;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		/*Resize the wrap to see the search bar change!*/
+		.wrap {
+			width: 80%;
+		}
+
+		.main1 {
+			background-color: beige;
+			width: 80%;
+			margin: 20px auto;
+			padding: 40px 0 40px 0;
+
+		}
+
+		.main1>div {
+			text-align: center;
+			margin: auto;
+		}
+
+		.main2 {
+			background-color: beige;
+			width: 80%;
+			margin: 20px auto;
+			padding: 40px 0 40px 0;
+			position: relative;
+		}
+
+		.main2>div {
+			text-align: center;
+			margin: auto;
+		}
+
+	</style>
 
 </head>
 
 <body>
 
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">myApp</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Parks</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Invite</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Rate</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Alarm</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <div class="container">
-        <h1 class="display-4">Hello, World!</h1>
-    </div>
+
+    <div class="wrap">
+		<div class="search">
+			<input type="text" class="searchTerm" placeholder="Which park are you looking for?">
+			<button type="submit" class="searchButton">
+				<i class="fa fa-search"></i>
+			</button>
+		</div>
+	</div>
+
+	<div class="main">
+		<div class="main1">
+			<div id="parklist"><a href="#" target="_blank">Park list (click here)</a></div>
+			<div id="image"><img src="images\bunaby mountain park.jpg" width=60%></div>
+		</div>
+		<div class="main2">
+			<div id="parklist"><a href="#" target="_blank">Making a rate (click here)</a></div>
+			<div id="image"><img src="images\rating.JPG" width=60%></div>
+		</div>
+	</div>
+</body>
+
+
+
+
     <nav class="navbar fixed-bottom navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Fixed bottom</a>
