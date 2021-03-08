@@ -14,14 +14,14 @@
 }
 
 .container {
-    width: 80%;
+    width: 100%;
 }
 
 .parkLink {
     text-align: center;
     display: block;
     font-size: 1em;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .top1 {
@@ -88,14 +88,12 @@
 }
 
 .top4 {
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .top4 p {
-    font-size: 1em;
     text-align: left;
-    margin-left: 70px;
 }
 
 .top4 img {

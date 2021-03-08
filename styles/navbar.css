@@ -50,5 +50,9 @@
     height: 4vh;
     margin-bottom: 15px;
     padding-top: 15%;
-    font-size: 30px;
+    font-size: 20px;
+}
+
+#ownNav ul li a span:last-of-type {
+    font-size: 5px;
 }
