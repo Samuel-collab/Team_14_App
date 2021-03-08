@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Park information</title>
+    <title>Rating</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -13,9 +13,8 @@
 
 
     <!-- Optional styles and scripts of your own -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/profile.css">
     <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/rate.css">
 
 </head>
 
@@ -56,48 +55,72 @@
     </nav>
 
     <div class="container">
-        <a class="parkLink" href=".myContainer{
-            background-color: aqua;
-        }">Burnaby Mountain Park</a>
-
-        <div class="top1">
-            <span>&#60</span>
-            <img class="parkI" src="images/burnaby mountain park.png">
-            <span>&#62</span>
-            <p>8155 Wedgewoo St, Burnaby, BC<br>V3N 3S5, Canada</p>
-
+        <div class="exitBar">
+            <p><span></span>&nbspBack</p>
         </div>
-        <div class="top2">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star halfStar"></span>
-        </div>
-
-        <div class="top3">
-
-            <span class="afterThumb"> 2688</span>
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_bad_black_18dp.png">
-        </div>
-
-        <div class="top4">
-            Population density
-            <img src="./images/bar chart.jpg">
-        </div>
-        <div class="top5">
-            <button class="btn btn-primary" type="submit">Rate Now</button>
-            <button class="btn btn-primary" type="submit">Not Now</button>
+        <div div class="c1">
+            <ul>
+                <li> Sterilized </li>
+                <li>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star halfStar"></div>
+                </li>
+                <li> Cleaness</li>
+                <li>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star halfStar"></div>
+                </li>
+                <li>Safety</li>
+                <li>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </li>
+                <li>Parking lot</li>
+                <li>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </li>
+                <li>One-way Trail </li>
+                <li>
+                    &nbspYes&nbsp&nbspNo
+                </li>
+                <li>Temp Test</li>
+                <li>
+                    &nbspYes&nbsp&nbspNo
+                </li>
+                <li>Sanitizer</li>
+                <li>
+                    &nbspYes&nbsp&nbspNo
+                </li>
+            </ul>
+            <input class="comment" type="text" placeholder="other comment...">
+            <button class="btn btn-primary" type="submit">Save</button>
         </div>
     </div>
+
+
+
     <nav class="navbar fixed-bottom navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Fixed bottom</a>
         </div>
     </nav>
+    <!-- <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fixed bottom</a>
+        </div> -->
+    </nav>
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->

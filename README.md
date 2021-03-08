@@ -44,7 +44,8 @@ Tips for file naming files and folders:
 
 
 Name: Guang Yang
-File: profile.file
+File: profile.html
+      Rate.html
 
 Name: Samuel Cheon
 File: sort.html
