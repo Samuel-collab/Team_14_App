@@ -1,0 +1,9 @@
+.click-me:hover {
+    color:red;
+    background-color:silver;
+    fill: red;
+}
+.click-me:active {
+    fill:blue;
+    background-color: blanchedalmond;
+}

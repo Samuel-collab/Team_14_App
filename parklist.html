@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My BCIT Project</title>
+    <meta name="comp1800 boilerplate code" content="my bcit project">
+    <meta name="author" content="BCIT">
+
+    <!-- Bootstrap for Mobile-first, and JQuery -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+
+    <!-- Optional styles and scripts of your own -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        h1{
+            text-align: center;
+  
+            margin: 5%;
+            font-size: 3rem;
+        }
+        .header {
+			width:100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-gap: 2%;
+		}
+        .image{
+            text-align: center;
+            font-size: 1.5rem;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-------------------------------------->
+    <!-- The following is HTML for layout -->
+    <!-------------------------------------->
+    <!-- Header Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">myApp</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Parks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Invite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Rate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Alarm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="parklist">
+        <h1>The park list in Burnaby</h1>
+        <div class="header">
+            <div class="image image1"><div><a href="" traget="_blank">Burnaby Mountain Park</a></div><img src="images\BurnabyMountatinPark.JPG" width=100%></div>
+            <div class="image image2"><a href="" traget="_blank"><div>Central Park</div><img src="images\CentralPark.JPG" width=100%></a></div>
+            <div class="image image3"><a href="" traget="_blank"><div>Deer Lake Park</div><img src="images\DeerLakePark.JPG" width=100%></a></div>
+            <div class="image image4"><a href="" traget="_blank"><div>Robert Bunaby Park</div><img src="images\RobertBunabyPark.JPG" width=100%></a></div>
+            <div class="image image5"><a href="" traget="_blank"><div>Barnet Marine Park</div><img src="images\BarnetMarinePark.JPG" width=100%></a></div>
+            <div class="image image6"><a href="" traget="_blank"><div>Burnaby Lake Regional Park</div><img src="images\BurnabyLakeRegionalPark.JPG" width=100%></a></div>
+            <div class="image image7"><a href="" traget="_blank"><div>Moody Park</div><img src="images\MoodyPark.JPG" width=100%></a></div>
+            <div class="image image7"><a href="" traget="_blank"><div>Brentwood Park</div><img src="images\BrentwoodPark.JPG" width=100%></a></div>
+    
+        </div>
+    </div>
+    
+    
+
+    <br><br>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Fixed bottom</a>
+        </div>
+    </nav>
+
+    <!----------------------------------------------->
+    <!-- JS: Boostrap, Firebase, API related    -->
+    <!----------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <!--------------------------------------------------------------------->
+    <!-- JS files: Your own JavaScript functions included here    -->
+    <!--------------------------------------------------------------------->
+
+</body>
+
+</html>
