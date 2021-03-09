@@ -13,9 +13,8 @@
     box-sizing: border-boxss;
 }
 
-.container {
+body .container {
     position: relative;
-    height: 100vh;
 }
 
 .exitBar {
@@ -26,12 +25,12 @@
     font-size: 1.5em;
 }
 
-li {
+.c1 ul li {
     font-family: "icomoon";
     list-style: none;
     width: 50%;
     float: left;
-    height: 8vh;
+    height: 5.5vh;
     border-collapse: collapse;
 }
 
