@@ -46,6 +46,8 @@ Tips for file naming files and folders:
 Name: Guang Yang
 File: RatePage.html
       Rate.html
+      parkReview.html
+      parkReview.html
 
 Name: Samuel Cheon
 File: sort.html
