@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+
+    margin: 5%;
+    font-size: 3rem;
+}
+.header {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+}
+.image{
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+
+a{
+    text-decoration: none;
+}
