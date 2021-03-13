@@ -113,14 +113,6 @@
     border-color: rgb(243, 243, 243);
 }
 
-.top5 .btn-primary:first-of-type {
-    float: left;
-}
-
-.top5 .btn-primary:last-of-type {
-    float: right;
-}
-
 .display-5 {
     background-color: yellow;
 }
