@@ -26,7 +26,7 @@ body {
     color: gray;
 }
 
-.searchButton {
+.searchButton { 
     width: 40px;
     height: 40px;
     border: 1px solid gray;
@@ -44,19 +44,26 @@ body {
     width: 60%;
 }
 
-.main{
-    font-size: 2rem;
-}
+
 
 .mainPortion {
     background-color: lightgray;
-    width: 80%;
+    width: 50%;
     margin: 3% auto;
-    padding: 5% 0;
-
+    padding: 5% 0; 
+    font-size: 3vw;
 }
 
 .mainPortion > div {
     text-align: center;
     margin: auto;
+}
+.parklist{
+    padding: 3%;
+}
+img{
+    border-radius: 25px;
+}
+a{
+    text-decoration: none;
 }

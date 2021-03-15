@@ -30,11 +30,28 @@
 .body{
     width:90%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 2%;
     margin: 5%;
     text-align: center;
 }
+
+.button {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 2vw;
+    margin: 3% auto;
+    cursor: pointer;
+    width: 80%;
+  }
+  
+
+
 
 .bodypart{
     font-size: 20vw;
