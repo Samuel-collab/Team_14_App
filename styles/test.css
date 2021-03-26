@@ -1,9 +1,43 @@
 .click-me:hover {
-    color:red;
-    background-color:silver;
+    color: red;
+    background-color: silver;
     fill: red;
 }
+
 .click-me:active {
-    fill:blue;
+    fill: blue;
     background-color: blanchedalmond;
 }
+
+
+@media (max-width: 375px) {
+    .toggle {
+
+        display: none;
+    }
+}
+
+/* 
+@media (max-width: 5000px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding-top: 160px;
+    }
+
+    @media (max-width: 320px) {
+        body {
+            padding-top: 30%;
+        }
+
+        @media (max-width: 280px) {
+            body {
+                padding-top: 35%;
+            }
+        }
+    }
+} */
