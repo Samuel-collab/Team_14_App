@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+}
+
+.top {
+    width:90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2%;
+    margin: 5%;
+}
+.toppart h1{
+    font-size: 3vw;
+    text-align: center;
+}
+.toppart div{
+    font-size: 2vw;
+}
+
+.parkinfo {
+    margin-left: 25%;
+}
+
+.body{
+    width:90%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-gap: 2%;
+    margin: 5%;
+    text-align: center;
+}
+
+.button {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 2%;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 2vw;
+    margin: 3% auto;
+    cursor: pointer;
+    width: 80%;
+  }
+
+.parkMap {
+    width:80%;
+}

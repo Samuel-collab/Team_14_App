@@ -15,7 +15,7 @@
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/parkDetail.css">
+    <link rel="stylesheet" href="./styles/parkMap.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/test.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
@@ -29,36 +29,6 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
-    <!-- <nav id="ownNav">
-        <ul>
-            <li>
-                <a href="#">
-                    <span></span>
-                    <span>Parks</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    <span></span>
-                    <span>Chat</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span></span>
-                    <span>Rate</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span></span>
-                    <span>Alarm</span>
-                </a>
-            </li>
-        </ul>
-    </nav> -->
-
     <ul class="nav nav-pills nav-fill navbar navbar-light bg-light fixed-top">
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="PARKS">
             <a class="nav-link" aria-current="page" href="parklist.html">
@@ -94,7 +64,7 @@
         </li>
     </ul>
 
-    <br/> <br/> <br/> <br/> <br/>
+    <br/> <br/> <br/>
 
     <div class="container">
         <div class="top">
@@ -109,24 +79,17 @@
                 </div>
             </div>
             <div class="topright toppart">
-                <img src="images\BurnabyMountatinPark.JPG" width=100%>
+                <img class="parkMap" src="images\BurnabyMountatinPark.JPG" width=100%>
             </div>
 
         </div>
 
         <div class="body">
-            <div class="bodyfirst bodypart"><a href="parkFacility.html" traget="_blank"><i class='fas fa-swimmer'></i></a></div>
-            <div class="bodysecond bodypart"><a href="" traget="_blank"><i class='fas fa-route'></i></a></div>
-            <div class="font">Facility</div>
-            <div class="font">How to go</div>
-            <div class="bodythird bodypart"><a href="parkMap.html" traget="_blank"><i class="fa fa-map" aria-hidden="true"></i></a></div>
-            <div class="bodyfourth bodypart"><a href="" traget="_blank"><i class='fas fa-user-edit'></i></a></div>
-            <div class="font">Park Map</div>
-            <div class="font">See the parkReview</div>
+
+            <div ><img class="parkMap" src="images\BurnabyMountainParkMap.JPG"></div>
+
+
         </div>
-
-
-
 
     </div>
 
@@ -172,12 +135,21 @@
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="./scripts/firebase_api_team_14.js"></script>
+    <script src="./scripts/parkFacility.js"></script>
+
 
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script src="scripts/my_functions.js"></script>
+
 
 </body>
 
