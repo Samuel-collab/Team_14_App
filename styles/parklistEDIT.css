@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    text-align: center;
+
+    margin: 5%;
+    font-size: 3rem;
+}
+.header {
+    width:100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*   */
+}
+.park{
+    text-align: center;
+    font-size: 0.8rem;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    
+    display: grid;
+    grid-template-rows: 20% 80%;
+    
+}
+
+.text{
+    grid-row: 1/ span 1;
+    font-size: 1.0rem;
+    
+}
+
+.image{
+    grid-row: 2/ span 1;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+.park a{
+    line-height: 5;
+}
