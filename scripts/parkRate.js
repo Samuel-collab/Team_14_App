@@ -4,6 +4,7 @@ parkSet.update({
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
 })
 
+
 function readBMPname() {
     parkSet.get().then(function(doc) {
         if (doc.exists) {
@@ -49,24 +50,35 @@ function add() {
     var index = 0;
     let title = document.getElementById('title');
     let comment = document.getElementById('comment');
-    if (getCollectionSize() == 0) {
-        index = '1';
-    } else {
-        index = getCollectionSize() + 1;
-    }
+
     var total = parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4);
     console.log("total: " + total);
-    firebase.firestore().collection("parks").doc("Burnaby Mountain Park").collection('rating').add({
-        Title: title.value,
-        Sterilization: r1,
-        Safety: r2,
-        Cleaness: r3,
-        "Parking lot": r4,
-        Total: total,
-        Comment: comment.value
 
-    });
-    title.value = '';
+    db.collection("users")
+        .where("name", "==", "red corn")
+        .get()
+        .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(doc.id);
+                console.log(doc.ref);
+                doc.ref.update({
+                    Title: title.value
+                })
+                console.log("done: " + title.value);
+            })
+        })
+
+    // firebase.firestore().collection("parks").where("name", "==", "Burnaby Mountain Park").set({
+    //     Title: title.value,
+    //     Sterilization: r1,
+    //     Safety: r2,
+    //     Cleaness: r3,
+    //     "Parking lot": r4,
+    //     Total: total,
+    //     Comment: comment.value
+
+    // });
+    //title.value = '';
 }
 
 function getCollectionSize() {
