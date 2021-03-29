@@ -30,7 +30,7 @@ h1{
 
 .text{
     grid-row: 1/ span 1;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
     
 }
 
@@ -43,6 +43,4 @@ a{
     
 }
 
-.park a{
-    line-height: 5;
-}
+
