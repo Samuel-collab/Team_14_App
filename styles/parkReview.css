@@ -58,8 +58,8 @@
 .star {
     padding: 0;
     float: left;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: yellow;
     clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0 38%, 37% 38%);
 }
@@ -74,13 +74,13 @@
 
 .afterThumb {
     font-family: 'icomoon';
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
     vertical-align: top;
 }
 
 .mood {
-    width: 1em;
+    width: 2em;
 }
 
 .afterThumb img {
@@ -107,9 +107,6 @@
 
 .btn-primary {
     width: 100px;
-    background-color: rgb(207, 196, 196);
-    color: black;
-    border-radius: 15%;
     border-color: rgb(243, 243, 243);
 }
 

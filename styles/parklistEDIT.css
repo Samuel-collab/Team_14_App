@@ -25,10 +25,13 @@ h1{
     
     display: grid;
     grid-template-rows: 20% 80%;
+    
 }
 
 .text{
     grid-row: 1/ span 1;
+    font-size: 1.2rem;
+    
 }
 
 .image{
