@@ -54,15 +54,21 @@ function add() {
     var total = parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4);
     console.log("total: " + total);
 
-    db.collection("users")
-        .where("name", "==", "red corn")
+    db.collection("parks")
+        .where("name", "==", "Burnaby Mountain Park")
         .get()
         .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                console.log(doc.id);
-                console.log(doc.ref);
-                doc.ref.update({
-                    Title: title.value
+                var id = doc.id;
+                console.log(id);
+                firebase.firestore().collection('parks').doc(id).collection("rating").add({
+                    Title: title.value,
+                    Sterilization: r1,
+                    Safety: r2,
+                    Cleaness: r3,
+                    "Parking lot": r4,
+                    Total: total,
+                    Comment: comment.value
                 })
                 console.log("done: " + title.value);
             })
