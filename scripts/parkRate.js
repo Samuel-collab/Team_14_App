@@ -44,6 +44,14 @@ $('.rating4 input').click((function() {
 
 }));
 
+//ADDED BY SAM
+var parkRatingSort = db.doc("parks/Burnaby Mountain Park/rating/RatingSort");
+parkRatingSort.get().then({
+    
+})
+
+//ADDED BY SAM
+
 
 
 function add() {
