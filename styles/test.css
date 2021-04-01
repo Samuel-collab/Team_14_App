@@ -9,14 +9,11 @@
     background-color: blanchedalmond;
 }
 
-
 @media (max-width: 375px) {
     .toggle {
-
         display: none;
     }
 }
-
 
 
 /* 

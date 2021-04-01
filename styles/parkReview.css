@@ -13,6 +13,20 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial;
+    margin: 0 auto;
+    /* Center website */
+    max-width: 800px;
+    /* Max width */
+    padding: 20px;
+}
+
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+}
+
 .container {
     width: 100%;
 }
@@ -29,38 +43,20 @@
     text-decoration: none;
 }
 
-.top1 {
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
+.col {
+    padding-top: 1vh;
 }
 
-.parkI {
-    display: inline-block;
-    text-align: center;
-    width: 70%;
-    margin-left: 10px;
-    margin-right: 10px;
-    height: 20vh;
+.card {
+    margin-top: 2.5vh;
 }
 
-.top1 p {
-    font-size: smaller;
+.card-body {
+    background-color: rgb(248, 249, 250);
 }
 
-.top2 {
-    display: flex;
-    margin: auto;
-    width: 50%;
-    height: 6vh;
-}
 
-.top2 span {
-    flex: 1;
-    align-items: center;
-}
-
-.star {
+/* .star {
     padding: 0;
     float: left;
     width: 40px;
@@ -71,11 +67,12 @@
 
 .halfStar {
     background: linear-gradient(to right, yellow 50%, white 50%);
-}
+} */
 
-.top3 {
+
+/* .top3 {
     text-align: center;
-}
+} */
 
 .afterThumb {
     font-family: 'icomoon';
@@ -93,7 +90,8 @@
     margin-left: 20px;
 }
 
-.top4 {
+
+/* .top4 {
     margin-top: 10px;
     text-align: center;
 }
@@ -109,7 +107,7 @@
 .top5 {
     margin-top: 10px;
     text-align: center;
-}
+} */
 
 .btn-primary {
     width: 100px;
@@ -118,4 +116,121 @@
 
 .display-5 {
     background-color: yellow;
+}
+
+.fa {
+    font-size: 25px;
+}
+
+.checked {
+    color: orange;
+}
+
+
+/* Three column layout */
+
+.side {
+    float: left;
+    width: 25%;
+    margin-top: 10px;
+}
+
+.middle {
+    margin-top: 10px;
+    float: left;
+    width: 50%;
+}
+
+
+/* Place text to the right */
+
+.right {
+    text-align: right;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* The bar container */
+
+.bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+}
+
+
+/* Individual bars */
+
+.bar-5 {
+    width: 60%;
+    height: 18px;
+    background-color: #4CAF50;
+}
+
+.bar-4 {
+    width: 30%;
+    height: 18px;
+    background-color: #2196F3;
+}
+
+.bar-3 {
+    width: 10%;
+    height: 18px;
+    background-color: #00bcd4;
+}
+
+.bar-2 {
+    width: 4%;
+    height: 18px;
+    background-color: #ff9800;
+}
+
+.bar-1 {
+    width: 15%;
+    height: 18px;
+    background-color: #f44336;
+}
+
+.reviewHeader {
+    height: 4vh;
+    margin-top: 5px;
+    background-color: rgb(243, 243, 243);
+}
+
+.reviewHeader>img {
+    height: 90%;
+    margin: 2px 0 1px 50px;
+    border-radius: 50%;
+}
+
+.reviewHeader h5 {
+    display: inline-block;
+    margin: 0 20px 0 20px;
+}
+
+.reviewBody p {
+    font-size: 1.5rem;
+    word-wrap: break-word;
+}
+
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+
+@media (max-width: 400px) {
+    .side,
+    .middle {
+        width: 100%;
+    }
+    .right {
+        display: none;
+    }
 }

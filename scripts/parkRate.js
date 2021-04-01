@@ -44,7 +44,25 @@ $('.rating4 input').click((function() {
 
 }));
 
-
+db.collection("parks")
+    .where("name", "==", "Burnaby Mountain Park")
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+            var id = doc.id;
+            console.log(id);
+            firebase.firestore().collection('parks').doc(id).update({
+                Title: title.value,
+                Sterilization: r1,
+                Safety: r2,
+                Cleaness: r3,
+                "Parking lot": r4,
+                Total: total,
+                Comment: comment.value
+            })
+            console.log("done: " + title.value);
+        })
+    })
 
 function add() {
     var index = 0;
