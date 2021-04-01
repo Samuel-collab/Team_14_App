@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Park information</title>
+    <title>Park Review</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -28,7 +28,7 @@
     <!-- Header Navigation Bar -->
     <ul class="nav nav-pills nav-fill navbar navbar-light bg-light fixed-top">
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="PARKS">
-            <a class="nav-link" aria-current="page" href="parklist.html">
+            <a class="nav-link" aria-current="page" href="parklistEDIT.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-tree-fill click-me" viewBox="0 0 16 16">
                     <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z"/>
                   </svg>
@@ -62,70 +62,206 @@
     </ul>
 
     <br/> <br/> <br/> <br/> <br/>
-
+    <!-- Park name -->
     <div class="container">
         <div class="container parkname">
             <a class="parkLink" href="parkDetail.html"></a>
         </div>
-
-
-        <div class="container top1">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./images/Burnaby Mountain Park/1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item  ">
-                        <img src="./images/Burnaby Mountain Park/2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item  ">
-                        <img src="./images/Burnaby Mountain Park/3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/Burnaby Mountain Park/4.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./images/Burnaby Mountain Park/5.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <p>8155 Wedgewoo St, Burnaby, BC<br>V3N 3S5, Canada</p>
-
-        </div>
-        <div class="top2">
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star"></span>
-            <span class="star halfStar"></span>
-        </div>
-
-        <div class="top3">
-            <a class="afterThumb" href="./RatePage.html" target="_blank"> 2688</a>
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-            <img class="mood smile" src="./images/baseline_mood_bad_black_18dp.png">
-        </div>
-        <div class="top5">
-            <button class="btn btn-primary" type="submit">Rate</button>
-        </div>
     </div>
 
+
+
+
+    <!-- Park scorecard -->
+    <div class="container scorecard">
+        <!-- Park card -->
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="./images/Burnaby Mountain Park/bunaby mountain park.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="container top1 address"></div>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- Review overview-->
+            </div>
+            <div class="col">
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.1 average based on 254 reviews.</p>
+                <hr style="border:3px solid #f1f1f1">
+
+                <div class="row">
+                    <div class="side">
+                        <div>5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>150</div>
+                    </div>
+                    <div class="side">
+                        <div>4.5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-5"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>150</div>
+                    </div>
+                    <div class="side">
+                        <div>4 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>3.5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>3 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-3"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>15</div>
+                    </div>
+                    <div class="side">
+                        <div>2.5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>2 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-2"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>6</div>
+                    </div>
+                    <div class="side">
+                        <div>1.5 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-4"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>63</div>
+                    </div>
+                    <div class="side">
+                        <div>1 star</div>
+                    </div>
+                    <div class="middle">
+                        <div class="bar-container">
+                            <div class="bar-1"></div>
+                        </div>
+                    </div>
+                    <div class="side right">
+                        <div>20</div>
+                    </div>
+                </div>
+
+                <!-- <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star halfStar"></span>
+                    <a class="afterThumb" href="./RatePage.html" target="_blank"> 2688</a>
+                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
+                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
+                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
+                    <img class="mood smile" src="./images/baseline_mood_bad_black_18dp.png"> -->
+            </div>
+
+        </div>
+    </div>
+    <!-- List reviews-->
+
+    <div class="reviewHeader">
+        <img src="./images/profile/user1.jpg" alt="">
+        <h5>
+            <span id="userName"></span>ttttttttt
+        </h5>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </div>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="box_{{id}}">...</span><span id="userID">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <button onclick="readMore()" id="myBtn">Read more</button>
+    </div>
+
+    <div class="reviewHeader">
+        <img src="./images/profile/user1.jpg" alt="">
+        <h5>
+            <span id="userName"></span>ttttttttt
+        </h5>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+        <button onclick="readMore()" id="myBtn">Read more</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Button to ParkReview page -->
+    <!-- <button class="btn btn-primary" type="submit">Rate</button> -->
+
+
+
     <br/> <br/> <br/> <br/> <br/>
+    <!-- Footer Navigation Bar -->
     <ul class="nav nav-pills nav-fill navbar fixed-bottom navbar-light bg-light">
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="USERS">
             <a class="nav-link" aria-current="page" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" width="16"
