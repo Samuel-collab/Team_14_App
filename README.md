@@ -47,10 +47,15 @@ Name: Guang Yang
 File: RatePage.html
       Rate.html
       parkReview.html
-      parkReview.html
+      login.html(add animation)
+      parkdetail.html(add carousel)
 
 Name: Samuel Cheon
 File: sort.html
+login.html
+navbar and footer in each file
 
 Name: Kwanyong Jo
 File: main.html
+    parkDetail.html
+    parkList.html
