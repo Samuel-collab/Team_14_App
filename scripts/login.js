@@ -78,7 +78,7 @@ function sayHello() {
             // Do something for the user here. 
             console.log(user.uid);
             document.getElementById("message").innerText = "Switch Accounts";
-        } else {
+        } else {    
             document.getElementById("message").innerText = "Log in page";
         }
     });
