@@ -1,6 +1,10 @@
 function goBack() {
-  window.history.back();
+    window.history.back();
 }
+
+
+// Pass parkID in url
+
 
 
 // var dataRef = db.doc('parkFacility/facility');

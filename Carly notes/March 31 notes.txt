@@ -1,0 +1,99 @@
+/parks/ bby mountain/   name:
+            location:
+            clean_total: 200        //increment ("likes")
+            clean_count: 40         //increment
+            clean_rate: 5           //calculate/update
+            parking_total: 100      //total of all so far
+            parking_count: 40       //# of rates so far
+            parking_rate: 2.5       //average so far
+            reviews     /901873 /   park_rate: 5
+                            clean_rate: 3
+                            bathroom_rate: 2
+                            space_rate:  3
+                            average_rate: 3.25
+                            timestamp: llj
+                            rater: user's name
+                            message:  "I love it"
+                      /7979797/ rate: 5
+                            timestamp: lkdafld
+                            message:  "I hate it"
+    kensington/ name:
+-------------------------------------
+to update after you calculated the new rating
+// type be string like "clean", or "parking"
+function calcuateNewRating(park, type){
+    //potentially construct "clean_total" from "type"
+    //update first
+    var clean_star = some number from stars;
+    db.collection("parks")
+    .doc(park)
+    .update({
+        "clean_total": firebase.firestore.FieldValue.increment(clean_stars),
+        "clean_count": firebase.firestore.FieldValue.increment(1) //"likes"
+    })
+    .then(function(){
+        //then, calculate step one (get the total/count)    
+        db.collection("parks").doc(park).get()
+        .then(function(doc){
+            var total=doc.data().clean_total;
+            var count=doc.data().clean_count;
+            var average = total/count;
+            //writeAverage(park, average, clean(?));
+            db.collection("parks").doc(park).update({
+                "clean_rate": average
+            }
+        }
+    }
+}
+function addListenerToRatingSubmit(){
+    docuemnt.getelementByID("ratingsubmitbutton").addEventListener("click", function()
+        var park = ... from url;
+        calculateNewRating(park, "clean"); 
+        calculateNewRating(park, "type"); 
+        }
+}
+db.collection("parks").doc("bby mountain")
+    .update({
+        clean_rate: newc,
+        parking_rate: newp
+    })
+--------------------------------------
+how to get and display the list of parks based on dropdown selection
+db.collection("parks")
+    .orderBy("clean_rate", "desc")
+    .get()   //list of parks
+    .then (function (snap) {
+        snap.forEach(function(doc){
+            console.log(doc.data().name);
+            //dynamic display that ONE park
+        })
+    })
+------------------------------
+db.collection("parks")
+    .doc("bby mountain")
+    .collection("reviews)
+    .where("clean_rate", "in", [4, 5])
+    .limit(5)   // this will show review of highest
+    .get()
+Collapse
+
+
+
+
+
+Message help-team-14
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

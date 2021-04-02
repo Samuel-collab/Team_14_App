@@ -1,4 +1,4 @@
-var docRef = db.doc('users/iEgnkNvQG2cY8MbluqI99JDJXdz2');
+/* var docRef = db.doc('users/iEgnkNvQG2cY8MbluqI99JDJXdz2');
 
 docRef.get().then(function(doc) {
     if (doc.exists) {
@@ -9,4 +9,4 @@ docRef.get().then(function(doc) {
     }
 }).catch(function(error) {
     console.log("Error getting document");
-});
+}); */

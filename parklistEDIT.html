@@ -9,8 +9,7 @@
 
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 
     <!-- Optional styles and scripts of your own -->
@@ -67,22 +66,38 @@
     <div id="parklist">
         <h1>The park list in Burnaby</h1>
         <div class="header">
-            <div class="park image1"><div class = "text"><a href="parkDetail.html" traget="_blank">Burnaby Mountain Park</div><div class = "image image1"><img src="images\BurnabyMountatinPark.JPG" width=100% height = 100%></a></div></div>
-            <div class="park image2"><div class = "text"><a href="" traget="_blank">Central Park</div><div class = "image image2"><img src="images\CentralPark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image3"><div class = "text"><a href="" traget="_blank">Deer Lake Park</div><div class = "image image3"><img src="images\DeerLakePark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image4"><div class = "text"><a href="" traget="_blank">Robert Burnaby Park</div><div class = "image image4"><img src="images\RobertBunabyPark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image5"><div class = "text"><a href="" traget="_blank">Barnet Marine Park</div><div class = "image image5"><img src="images\BarnetMarinePark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image6"><div class = "text"><a href="" traget="_blank">Burnaby Lake Regional Park</div><div class = "image image6"><img src="images\BurnabyLakeRegionalPark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image7"><div class = "text"><a href="" traget="_blank">Moody Park</div><div class = "image image7"><img src="images\MoodyPark.JPG" width=100% height= 100%></a></div></div>
-            <div class="park image7"><div class = "text"><a href="" traget="_blank">Brentwood Park</div><div class = "image image8"><img src="images\BrentwoodPark.JPG" width=100% height= 100%></a></div></div>
-    
+            <div class="park image1">
+                <div class="text"><a id="bpm" href="parkDetail.html" target="_blank">Burnaby Mountain Park</div><div class = "image image1"><img src="./images/Burnaby Mountain Park/burnaby mountain park.png" width=100% height = 100%></a></div>
+            </div>
+            <div class="park image2">
+                <div class="text"><a href="" traget="_blank">Central Park</div><div class = "image image2"><img src="images\CentralPark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image3">
+                <div class="text"><a href="" traget="_blank">Deer Lake Park</div><div class = "image image3"><img src="images\DeerLakePark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image4">
+                <div class="text"><a href="" traget="_blank">Robert Burnaby Park</div><div class = "image image4"><img src="images\RobertBunabyPark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image5">
+                <div class="text"><a href="" traget="_blank">Barnet Marine Park</div><div class = "image image5"><img src="./images/MoodyPark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image6">
+                <div class="text"><a href="" traget="_blank">Burnaby Lake Regional Park</div><div class = "image image6"><img src="images\BurnabyLakeRegionalPark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image7">
+                <div class="text"><a href="" traget="_blank">Moody Park</div><div class = "image image7"><img src="images\MoodyPark.JPG" width=100% height= 100%></a></div>
+            </div>
+            <div class="park image7">
+                <div class="text"><a href="" traget="_blank">Brentwood Park</div><div class = "image image8"><img src="images\BrentwoodPark.JPG" width=100% height= 100%></a></div>
+            </div>
+
         </div>
     </div>
-    
-    
+
+
 
     <br/> <br/> <br/> <br/> <br/> <br/> <br/>
- 
+
 
     <!---This is the footer---------------------------------------------------------->
     <ul class="nav nav-pills nav-fill navbar fixed-bottom navbar-light bg-light">
@@ -107,26 +122,26 @@
               </svg>
               <p style="margin: 0 0 0 0; padding: 0 0 0 0; color: black;">Back</p>
             </a>
-          </li>
+        </li>
 
 
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
-    <!----------------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-    <script src="./scripts/firebase_api_team_14.js"></script>
+        <!----------------------------------------------->
+        <!-- JS: Boostrap, Firebase, API related    -->
+        <!----------------------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+        </script>
+        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="./scripts/firebase_api_team_14.js"></script>
 
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
-    <script src ="scripts/test.js"> </script>
+        <!--------------------------------------------------------------------->
+        <!-- JS files: Your own JavaScript functions included here    -->
+        <!--------------------------------------------------------------------->
+        <script src="./scripts/parkList.js">
+        </script>
 </body>
 
 </html>

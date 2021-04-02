@@ -13,20 +13,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2%;
-    margin: 5%;
 }
 
 .toppart h1 {
-    font-size: 3vw;
+    font-size: 3rem;
     text-align: center;
 }
 
-.toppart div {
-    font-size: 2vw;
+.toppart h3 {
+    text-align: center;
+    font-size: 2rem;
 }
 
-.parkinfo {
-    margin-left: 25%;
+.parkinfo p {
+    font-size: 1.5rem;
 }
 
 .body {
@@ -39,14 +39,31 @@
 }
 
 .bodypart {
-    font-size: 20vw;
+    font-size: 15vw;
 }
 
 .font {
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .font a {
     color: inherit;
     text-decoration: none;
+}
+
+.click-me:hover {
+    color: red;
+    background-color: silver;
+    fill: red;
+}
+
+.click-me:active {
+    fill: blue;
+    background-color: blanchedalmond;
+}
+
+@media (max-width: 375px) {
+    .toggle {
+        display: none;
+    }
 }
