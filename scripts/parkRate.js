@@ -44,6 +44,17 @@ $('.rating4 input').click((function() {
 
 }));
 
+<<<<<<< HEAD
+//ADDED BY SAM
+var parkRatingSort = db.doc("parks/Burnaby Mountain Park/rating/RatingSort");
+parkRatingSort.get().then({
+    
+})
+
+//ADDED BY SAM
+
+
+=======
 db.collection("parks")
     .where("name", "==", "Burnaby Mountain Park")
     .get()
@@ -63,6 +74,7 @@ db.collection("parks")
             console.log("done: " + title.value);
         })
     })
+>>>>>>> 278071a5f264511474d54c44228ec96a9cc82206
 
 function add() {
     var index = 0;
