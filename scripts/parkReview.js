@@ -1,35 +1,44 @@
-var parkSet = db.collection("parks").doc("Burnaby Mountain Park");
+// Go back to previus page
+function goBack() {
+    window.history.back();
+}
 
+// Display park information based on PARKID
+function getDetails() {
+    // https://some.site/?id=ParkID
+    const parsedUrl = new URL(window.location.href);
+    // extract id from url, assign to variable
+    var id = parsedUrl.searchParams.get("id");
+    db.collection("parks")
+        .doc(id)
+        .get()
+        .then(function(doc) {
+            var name = doc.data().name;
+            var address = doc.data().address;
+            $(".parkLink").text(name);
+            $(".address").text(address);
+        })
+    addParkListener(id);
+}
+getDetails();
 
-/* parkSet.set({
-    name: "Burnaby Mountain Park",
-    address: "100 Centennial Way, Burnaby, BC V5A 2X9, Canada",
-    facilities: "swimming pool, slide"
+// Add event listener for"see the parkReview" and add PARKID in the url
+function addParkListener(id) {
+    var a = document.getElementById("goToRate");
+    if (a) {
+        a.addEventListener("click", function() {
+            console.log("goToRate was clicked!")
+            window.location.href = "RatePage.html?id=" + id;
+        });
+    }
+}
 
-}).then(function() {
-    console.log("Document is written!");
-}).catch(function(err) {
-    console.log(err);
-}); */
-
+/* var parkSet = db.collection("parks").doc("Burnaby Mountain Park");
 parkSet.update({
     createdAt: firebase.firestore.FieldValue.serverTimestamp()
-})
+}) */
 
-function readBMPname() {
-    parkSet.get().then(function(doc) {
-        if (doc.exists) {
-            console.log("Document data: ", doc.data());
-            $(".parkLink").text(doc.data().name);
-            $(".address").text(doc.data().address);
-        } else {
-            console.log("Not found");
-        }
-    })
-
-}
-readBMPname();
-
+// Readmore button
 function readMore() {
 
     var moreText = document.getElementsByClassName("reviewBody");

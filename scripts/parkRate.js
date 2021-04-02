@@ -1,41 +1,73 @@
-var parkSet = db.collection("parks").doc("Burnaby Mountain Park");
+// Go back to previus page
+function goBack() {
+    window.history.back();
+}
 
-parkSet.update({
-    createdAt: firebase.firestore.FieldValue.serverTimestamp()
-})
+// https://some.site/?id=ParkID
+const parsedUrl = new URL(window.location.href);
 
+// extract id from url, assign to variable.
+var id = parsedUrl.searchParams.get("id");
 
-function readBMPname() {
-    parkSet.get().then(function(doc) {
-        if (doc.exists) {
-            console.log("Document data: ", doc.data());
-            $(".infroText .p1").text(doc.data().name);
-            $(".infroText .p2").text(doc.data().address);
-        } else {
-            console.log("Not found");
+// Get userID and name by getUser().
+var uid;
+var uname;
+
+function getUser() {
+    firebase.auth().onAuthStateChanged(function(sb) {
+        if (sb) {
+            uid = sb.uid;
+            console.log(uid);
+            db.collection('users').doc(sb.uid)
+                .get() // read!
+                .then(function(doc) {
+                    console.log(doc.data().name);
+                    uname = doc.data().name;
+                })
         }
     })
 }
-readBMPname();
+getUser();
 
+// Display park information based on PARKID
+function getDetails() {
+    db.collection("parks")
+        .doc(id)
+        .get()
+        .then(function(doc) {
+            var name = doc.data().name;
+            var address = doc.data().address;
+            $(".infroText .p1").text(name);
+            $(".infroText .p2").text(address);
+        })
+
+}
+getDetails();
+
+// Rating score of Crowdedness.
 var r1 = 0;
 $('.rating1 input').click((function() {
-
     r1 = $(this).val();
     console.log("r1:" + r1);
 }));
+
+// Rating score of bathroom.
 var r2 = 0;
 $('.rating2 input').click((function() {
 
     r2 = $(this).val();
     console.log("r2:" + r2);
 }));
+
+// Rating score of cleaness.
 var r3 = 0;
 $('.rating3 input').click((function() {
 
     r3 = $(this).val();
     console.log("r3:" + r3);
 }));
+
+// Rating score of parkling lot.
 var r4 = 0;
 $('.rating4 input').click((function() {
 
@@ -44,216 +76,101 @@ $('.rating4 input').click((function() {
 
 }));
 
-<<<<<<< HEAD
-//ADDED BY SAM
-var parkRatingSort = db.doc("parks/Burnaby Mountain Park/rating/RatingSort");
-parkRatingSort.get().then({
-    
-})
+// Round the number to 0.5 or integer.
+function roundHalf(num) {
+    return Math.round(num * 2) / 2;
+}
 
-//ADDED BY SAM
-
-
-=======
-db.collection("parks")
-    .where("name", "==", "Burnaby Mountain Park")
-    .get()
-    .then((querySnapshot) => {
-        querySnapshot.forEach((doc) => {
-            var id = doc.id;
-            console.log(id);
-            firebase.firestore().collection('parks').doc(id).update({
+// Save review data to firebase.
+function add() {
+    document.getElementById("save").addEventListener("click", function() {
+        var index = 0;
+        let title = document.getElementById('title');
+        let comment = document.getElementById('comment');
+        var total = parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4)
+        var aver = roundHalf(total / 4);
+        console.log("total:" + total);
+        console.log("average:" + aver);
+        //Save individual review into rating collection, which is a subcollection of the user document.
+        db.collection("parks")
+            .doc(id)
+            .collection("reviews")
+            .add({
                 Title: title.value,
-                Sterilization: r1,
-                Safety: r2,
+                Crowdedness: r1,
+                Bathroom: r2,
                 Cleaness: r3,
                 "Parking lot": r4,
                 Total: total,
-                Comment: comment.value
+                average: total / 4,
+                username: uname,
+                Comment: comment.value,
+                createdAt: firebase.firestore.FieldValue.serverTimestamp()
             })
-            console.log("done: " + title.value);
-        })
+        console.log("done: " + title.value);
+
     })
->>>>>>> 278071a5f264511474d54c44228ec96a9cc82206
+}
+add();
 
-function add() {
-    var index = 0;
-    let title = document.getElementById('title');
-    let comment = document.getElementById('comment');
-
-    var total = parseFloat(r1) + parseFloat(r2) + parseFloat(r3) + parseFloat(r4);
-    console.log("total: " + total);
-
+// Get update rating total, count and average for each rating item.
+function caculateRating() {
     db.collection("parks")
-        .where("name", "==", "Burnaby Mountain Park")
-        .get()
-        .then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                var id = doc.id;
-                console.log(id);
-                firebase.firestore().collection('parks').doc(id).collection("rating").add({
-                    Title: title.value,
-                    Sterilization: r1,
-                    Safety: r2,
-                    Cleaness: r3,
-                    "Parking lot": r4,
-                    Total: total,
-                    Comment: comment.value
+        .doc(id)
+        .update({
+            clean_count: firebase.firestore.FieldValue.increment(1),
+            clean_total: firebase.firestore.FieldValue.increment(r3),
+        })
+        .then(() => {
+            db.collection("parks")
+                .doc(id)
+                .get()
+                .then((doc) => {
+                    var total = doc.data().clean_total;
+                    var count = doc.data().clean_count;
+                    var average = total / count;
+                    db.collection("parks")
+                        .doc(id)
+                        .update({
+                            clean_rate: average
+                        })
                 })
-                console.log("done: " + title.value);
-            })
-        })
-
-    // firebase.firestore().collection("parks").where("name", "==", "Burnaby Mountain Park").set({
-    //     Title: title.value,
-    //     Sterilization: r1,
-    //     Safety: r2,
-    //     Cleaness: r3,
-    //     "Parking lot": r4,
-    //     Total: total,
-    //     Comment: comment.value
-
-    // });
-    //title.value = '';
-}
-
-function getCollectionSize() {
-    parkSet.collection("rating").get()
-        .then(function(snap) {
-            var size = snap.size;
-            console.log(size);
-            return size;
         })
 }
 
-
-
-
-
-
-/* db.collection("rating").get().then(function(querySnapshot) {
-    console.log(querySnapshot.size);
-});
-
-var stars = [false, false, false, false, false];
-
-function addRating() {
-    let title = document.getElementById('title');
-    firebase.firestore().collection("parks").doc("Burnaby Mountain Park").collection("rating").add({
-        title: title.value,
-        rating: stars
-    });
-    title.value = '';
-    console.log("added");
-}
-
-function color(key, star) {
-    for (let index = 0; index <= star; index++) {
-        document.getElementById('star' + key + (index)).style.color = "orange";
-    }
-}
-
-function nocolor(key) {
-    for (let index = 0; index < stars.length; index++) {
-        document.getElementById('star' + key + (index)).style.color = "initial";
-    }
-}
-
-function mark(name, key, star) {
-    for (let index = 0; index <= star; index++) {
-        stars[index] = true
-    }
-    firebase.firestore().parkSet.collection('rating').doc(key).set({
-        title: name,
-        rating: stars
+// when users save the review, invoke caculateRating().
+function addEventListenerToRatingSave() {
+    document.getElementById("save").addEventListener("click", function() {
+        caculateRating();
     })
-    stars = [false, false, false, false, false];
 }
+addEventListenerToRatingSave();
 
-(() => {
+//setFieldToZero();
 
-
-    firebase.firestore().collection("parks").doc("Burnaby Mountain Park").collection("rating")
-        .onSnapshot(function(querySnapshot) {
-
-            document.getElementById('render1').innerHTML = '';
-            querySnapshot.forEach(function(doc) {
-                console.log(doc.id)
-                if (doc.data().rating[0]) {
-                    document.getElementsById('render1').innerHTML += `
-            <div class="row" id="${doc.id}">
-            <div class="col">
-            <div id="starsR${doc.id}"></div>  
-            </div>
-                                                         
-            </div>
-            
-            `;
-                    for (let index = 0; index < doc.data().rating.length; index++) {
-                        if (doc.data().rating[index]) {
-                            document.getElementById('starsR' + doc.id).innerHTML += `
-                    
-                    <i style="color:orange" class="fa fa-star"></i>                                    
-                    
-                    `;
-                        } else {
-                            document.getElementById('starsR' + doc.id).innerHTML += `
-                    <i style="color:initial" class="fa fa-star"></i>
-                   
-                    `;
-                        }
+// If there is no review, set the count, total and rate of each item to 0.
+function getFieldBackToZero() {
+    db.collection("parks")
+        .get()
+        .then(function(snap) {
+            snap.forEach((doc) => {
+                doc.ref.collection("rating").get().then((snap) => {
+                    var size = snap.size;
+                    console.log(snap.size);
+                    if (size == 0) {
+                        db.collection("parks")
+                            .doc(id)
+                            .update({
+                                clean_count: 0,
+                                clean_total: 0,
+                                clean_rate: 0,
+                            }).then(() => {
+                                console.log("back to 0");
+                            })
                     }
-                } else {
-                    document.getElementById('render1').innerHTML += `
-            <div class="row" id="${doc.id}">
-                <div class="col">   
-                        <i onmouseover="color('${doc.id}','0')" onclick="mark('${doc.data().title}','${doc.id}','0')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+0}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','1')" onclick="mark('${doc.data().title}','${doc.id}','1')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+1}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','2')" onclick="mark('${doc.data().title}','${doc.id}','2')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+2}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','3')" onclick="mark('${doc.data().title}','${doc.id}','3')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+3}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','4')" onclick="mark('${doc.data().title}','${doc.id}','4')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+4}' class="fa fa-star"></i>                   </div>                    
-            </div>
-            
-            `;
-                    document.getElementById('render2').innerHTML += `
-            <div9 class="row" id="${doc.id}">
-                <div class="col">   
-                        <i onmouseover="color('${doc.id}','5')" onclick="mark('${doc.data().title}','${doc.id}','0')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+5}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','6')" onclick="mark('${doc.data().title}','${doc.id}','1')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+6}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','7')" onclick="mark('${doc.data().title}','${doc.id}','2')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+7}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','8')" onclick="mark('${doc.data().title}','${doc.id}','3')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+8}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','9')" onclick="mark('${doc.data().title}','${doc.id}','4')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+9}' class="fa fa-star"></i>                   </div>                    
-            </div9
-        9
-        9   `;
-                    document.getElementById('render3').innerHTML += `
-            <div class="row" id="${doc.id}">
-                <div class="col">   
-                        <i onmouseover="color('${doc.id}','0')" onclick="mark('${doc.data().title}','${doc.id}','0')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+0}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','1')" onclick="mark('${doc.data().title}','${doc.id}','1')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+1}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','2')" onclick="mark('${doc.data().title}','${doc.id}','2')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+2}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','3')" onclick="mark('${doc.data().title}','${doc.id}','3')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+3}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','4')" onclick="mark('${doc.data().title}','${doc.id}','4')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+4}' class="fa fa-star"></i>                   </div>                    
-            </div>
-            
-            `;
+                })
+            })
 
-                    document.getElementById('render4').innerHTML += `
-            <div class="row" id="${doc.id}">
-                <div class="col">   
-                        <i onmouseover="color('${doc.id}','0')" onclick="mark('${doc.data().title}','${doc.id}','0')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+0}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','1')" onclick="mark('${doc.data().title}','${doc.id}','1')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+1}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','2')" onclick="mark('${doc.data().title}','${doc.id}','2')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+2}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','3')" onclick="mark('${doc.data().title}','${doc.id}','3')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+3}' class="fa fa-star"></i>
-                        <i onmouseover="color('${doc.id}','4')" onclick="mark('${doc.data().title}','${doc.id}','4')" onmouseleave="nocolor('${doc.id}')" id='${'star'+doc.id+4}' class="fa fa-star"></i>                   </div>                    
-            </div>
-            
-            `;
-                }
-            });
-
-        });
-
-
-
-})(); */
+        })
+}
+getFieldBackToZero()
