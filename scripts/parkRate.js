@@ -100,7 +100,7 @@ function add() {
                 Crowdedness: r1,
                 Bathroom: r2,
                 Cleaness: r3,
-                "Parking lot": r4,
+                Parkinglot: r4,
                 Total: total,
                 average: total / 4,
                 username: uname,
@@ -120,19 +120,44 @@ function caculateRating() {
         .update({
             clean_count: firebase.firestore.FieldValue.increment(1),
             clean_total: firebase.firestore.FieldValue.increment(r3),
+            crowdedness_count: firebase.firestore.FieldValue.increment(1),
+            crowdedness_total: firebase.firestore.FieldValue.increment(r1),
+            bathroom_count: firebase.firestore.FieldValue.increment(1),
+            bathroom_total: firebase.firestore.FieldValue.increment(r2),
+            parkinglot_count: firebase.firestore.FieldValue.increment(1),
+            parkinglot_total: firebase.firestore.FieldValue.increment(r4),
         })
         .then(() => {
             db.collection("parks")
                 .doc(id)
                 .get()
                 .then((doc) => {
-                    var total = doc.data().clean_total;
-                    var count = doc.data().clean_count;
-                    var average = total / count;
+                    var crowdedness_total = doc.data().clean_total;
+                    var crowdedness_count = doc.data().clean_count;
+                    var crowdedness_average = crowdedness_total / crowdedness_count;
+
+                    var clean_total = doc.data().clean_total;
+                    var clean_count = doc.data().clean_count;
+                    var clean_average = clean_total / clean_count;
+
+                    var bathroom_total = doc.data().clean_total;
+                    var bathroom_count = doc.data().clean_count;
+                    var bathroom_average = bathroom_total / bathroom_count;
+
+                    var bathroom_total = doc.data().clean_total;
+                    var bathroom_count = doc.data().clean_count;
+                    var bathroom_average = bathroom_total / bathroom_count;
+
+                    var parkinglot_total = doc.data().clean_total;
+                    var parkinglot_count = doc.data().clean_count;
+                    var parkinglot_average = parkinglot_total / parkinglot_count;
                     db.collection("parks")
                         .doc(id)
                         .update({
-                            clean_rate: average
+                            clean_rate: clean_average,
+                            crowdedness_rate: crowdedness_average,
+                            bathroom_rate: bathroom_average,
+                            parkinglot_rate: parkinglot_average,
                         })
                 })
         })
@@ -151,26 +176,33 @@ addEventListenerToRatingSave();
 // If there is no review, set the count, total and rate of each item to 0.
 function getFieldBackToZero() {
     db.collection("parks")
+        .doc(id)
         .get()
-        .then(function(snap) {
-            snap.forEach((doc) => {
-                doc.ref.collection("rating").get().then((snap) => {
-                    var size = snap.size;
-                    console.log(snap.size);
-                    if (size == 0) {
-                        db.collection("parks")
-                            .doc(id)
-                            .update({
-                                clean_count: 0,
-                                clean_total: 0,
-                                clean_rate: 0,
-                            }).then(() => {
-                                console.log("back to 0");
-                            })
-                    }
-                })
+        .then(function(doc) {
+            doc.ref.collection("reviews").get().then((snap) => {
+                var size = snap.size;
+                console.log(snap.size);
+                if (size == 0) {
+                    db.collection("parks")
+                        .doc(id)
+                        .update({
+                            crowdedness_count: 0,
+                            crowdedness_total: 0,
+                            crowdedness_rate: 0,
+                            bathroom_count: 0,
+                            bathroom_total: 0,
+                            bathroom_rate: 0,
+                            clean_count: 0,
+                            clean_total: 0,
+                            clean_rate: 0,
+                            parkinglot_count: 0,
+                            parkinglot_total: 0,
+                            parkinglot_rate: 0,
+                        }).then(() => {
+                            console.log("back to 0");
+                        })
+                }
             })
-
         })
 }
-getFieldBackToZero()
+getFieldBackToZero();

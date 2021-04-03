@@ -35,3 +35,21 @@ function sayHello() {
     });
 }
 sayHello();
+
+
+
+/**click to parklist.html */
+function addParkListListener() {
+    var a = document.getElementsByClassName("parklist");
+    if (a) {
+        for (var i = 0; i < a.length; i++) {
+            a[i].addEventListener('click', function() {
+                console.log(a + "was clicked!")
+
+                window.location.href = "parklistEDIT.html";
+            });
+        }
+
+    }
+} 
+addParkListListener();

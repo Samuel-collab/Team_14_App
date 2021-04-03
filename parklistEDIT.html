@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
+    <title>Team14 Project</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -73,11 +73,11 @@
               Sort
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="#">Overall Rating</a></li>
-                <li><a class="dropdown-item" href="#">Cleanliness ratings</a></li>
-                <li><a class="dropdown-item" href="#">Bathroom ratings</a></li>
-                <li><a class="dropdown-item" href="#">Parkinglots ratings</a></li>
-                <li><a class="dropdown-item" href="#">Uncrowded ratings</a></li>
+                <li><a id="" class="dropdown-item" href="#">Overall Rating</a></li>
+                <li><a id="cleanliness" class="dropdown-item" href="#">Cleanliness ratings</a></li>
+                <li><a id="bathroom" class="dropdown-item" href="#">Bathroom ratings</a></li>
+                <li><a id="parkinglot" class="dropdown-item" href="#">Parkinglots ratings</a></li>
+                <li><a id="uncrowded" class="dropdown-item" href="#">Uncrowded ratings</a></li>
             </ul>
         </div>
 
@@ -85,33 +85,37 @@
             <div class="park image1">
                 <div class="text"><a class="bpm" href="" target="_blank">Burnaby Mountain Park</a></div>
                 <div class="image image1">
-                    <a class="bpm" href="" target="_blank"><img src="./images/Burnaby Mountain Park/burnaby mountain park.png" width=100% height=1 00%></a>
+                    <a class="bpm" href="" target="_blank"><img src="./images/Burnaby Mountain Park/BurnabyMountatinPark.JPG" width=100% height=100%></a>
                 </div>
             </div>
             <div class="park image2">
                 <div class="text"><a class="cp" href="" target="_blank">Central Park</a></div>
                 <div class="image image2">
-                    <a class="cp" href="" traget="_blank"><img src="images\CentralPark.JPG" width=100% height=1 00%></a>
+                    <a class="cp" href="" traget="_blank"><img src="images\CentralPark.JPG" width=100% height=100%></a>
                 </div>
             </div>
-            <div class="park image3">
-                <div class="text"><a href="" traget="_blank">Deer Lake Park</div><div class = "image image3"><img src="images\DeerLakePark.JPG" width=100% height= 100%></a></div>
+            <div class="DLP" id="park3">
+                <div><a class="dlp text" href="" target="_blank">Deer Lake Park</div><div class = "image image3"><img src="images\DeerLakePark.JPG" width=100% height= 100%></a></div>
             </div>
-            <div class="park image4">
-                <div class="text"><a href="" traget="_blank">Robert Burnaby Park</div><div class = "image image4"><img src="images\RobertBunabyPark.JPG" width=100% height= 100%></a></div>
+            <div class="RBP" id="park4">
+                <div><a class="rbp text" href="" traget="_blank">Robert Burnaby Park</div><div class = "image image4"><img src="images\RobertBunabyPark.JPG" width=100% height= 100%></a></div>
             </div>
-            <div class="park image5">
-                <div class="text"><a href="" traget="_blank">Barnet Marine Park</div><div class = "image image5"><img src="./images/MoodyPark.JPG" width=100% height= 100%></a></div>
+            <div class="BMRP" id="park5">
+                <div><a class="bmrp text" href="" traget="_blank">Barnet Marine Park</a></div>
+                <div class="image image5">
+                    <a class="bmrp" href="" traget="_blank"><img src="./images/MoodyPark.JPG" width=100% height=100%></a>
+                </div>
             </div>
-            <div class="park image6">
-                <div class="text"><a href="" traget="_blank">Burnaby Lake Regional Park</div><div class = "image image6"><img src="images\BurnabyLakeRegionalPark.JPG" width=100% height= 100%></a></div>
+            <div class="BLRP" id="park6">
+                <div><a class="blrp text" href="" traget="_blank">Burnaby Lake Regional Park</div><div class = "image image6"><img src="images\BurnabyLakeRegionalPark.JPG" width=100% height= 100%></a></div>
             </div>
-            <div class="park image7">
+            <!--Ignore these parks for now-->
+            <!-- <div class="park image7">
                 <div class="text"><a href="" traget="_blank">Moody Park</div><div class = "image image7"><img src="images\MoodyPark.JPG" width=100% height= 100%></a></div>
             </div>
             <div class="park image7">
                 <div class="text"><a href="" traget="_blank">Brentwood Park</div><div class = "image image8"><img src="images\BrentwoodPark.JPG" width=100% height= 100%></a></div>
-            </div>
+            </div> -->
 
         </div>
     </div>
@@ -162,7 +166,7 @@
         <!--------------------------------------------------------------------->
         <!-- JS files: Your own JavaScript functions included here    -->
         <!--------------------------------------------------------------------->
-        <script src="./scripts/parkList.js">
+        <script src="./scripts/parkList.js"></script>
         </script>
         <script src="scripts/test.js"></script>
 </body>

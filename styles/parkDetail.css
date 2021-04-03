@@ -4,8 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(197, 218, 193);
+}
+
 .container {
     width: 100%;
+    display: grid;
 }
 
 .top {
@@ -16,34 +21,38 @@
 }
 
 .toppart h1 {
-    font-size: 3rem;
+    font-size: 16px;
+    font-size: 4vw;
     text-align: center;
+    font-weight: bold;
 }
 
 .toppart h3 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .parkinfo p {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .body {
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 2%;
-    margin: 10%;
+    /* grid-gap: 2%; */
+    /* margin: 10%; */
+    margin: 3%;
     text-align: center;
 }
 
 .bodypart {
-    font-size: 15vw;
+    font-size: 10rem;
+    margin: 20px;
 }
 
 .font {
-    font-size: 2vw;
+    font-size: 3rem;
 }
 
 .font a {
@@ -66,4 +75,8 @@
     .toggle {
         display: none;
     }
+}
+
+.iconColor {
+    color: rgb(20, 20, 9);
 }
