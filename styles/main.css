@@ -1,4 +1,5 @@
 body {
+    background-color:white;
 
     font-family: 'Open Sans', sans-serif;
 }
@@ -45,9 +46,8 @@ body {
 }
 
 
-
 .mainPortion {
-    background-color: lightgray;
+    background-color: lightgrey;
     width: 50%;
     margin: 3% auto;
     padding: 5% 0; 
@@ -66,4 +66,9 @@ img{
 }
 a{
     text-decoration: none;
+}
+
+#greeting {
+    text-align: center;
+    background-color:#9DBFAF;
 }
