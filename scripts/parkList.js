@@ -25,9 +25,10 @@ function addParkListener(id) {
     if (a) {
         for (var i = 0; i < a.length; i++) {
             a[i].addEventListener('click', function() {
-                console.log("bpm was clicked!")
+                console.log("bpm was clicked!")                
                 // window.location.href = "details.html";
                 // When we redirect, tack on after "?" the id of the webcam
+                
             window.location.href = "parkDetail.html?id=" + id;
             });
         }
@@ -47,7 +48,7 @@ function addParkListener(id) {
 // get PARKID from doc and pass it to next page.
 function passParkId2() {
     db.collection("parks")
-        .where("name", "==", "Barnet Marine Park") //new query to look for field in a set
+        .where("listKey", "==", "cp") //new query to look for field in a set
         .get() //Read
         .then(function(snapcollection) {
             snapcollection.forEach(doc => {
@@ -68,8 +69,8 @@ function addParkListener2(id) {
     if (a) {
         for (var i = 0; i < a.length; i++) {
             a[i].addEventListener('click', function() {
-                console.log("cp was clicked!");
-                console.log(id)
+                console.log(id + "was clicked!")
+                
                 // window.location.href = "details.html";
                 // When we redirect, tack on after "?" the id of the webcam
                 window.location.href = "parkDetail.html?id=" + id;

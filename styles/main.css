@@ -68,9 +68,16 @@ body {
 .parklist{
     padding: 3%;
     background-color: rgb(255,250,251);
-    color: rgb(137,137,128);
-    
+    color: rgb(137,137,128); 
 }
+
+.rating{
+    padding: 3%;
+    background-color: rgb(255,250,251);
+    color: rgb(137,137,128); 
+}
+
+
 img{
     border-radius: 25px;
     
@@ -83,4 +90,10 @@ a{
     text-align: center;
     background-color: rgb(222,242,200);
     color: rgb(137,137,128);
+}
+
+#add-color {
+    margin-top: 30px;
+    background-color: rgb(222,242,200);
+    height: 9vh;
 }
