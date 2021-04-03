@@ -1,9 +1,13 @@
 body {
-    background-color:white;
+    background-color:rgb(197,218,193);
 
     font-family: 'Open Sans', sans-serif;
 }
 
+.navbarC{
+    background-color: rgb(125,226,209);
+    border-color: rgb(233,196,106);
+  }
 
 .search {
     width: 100%;	
@@ -47,22 +51,29 @@ body {
 
 
 .mainPortion {
-    background-color: lightgrey;
+    /*background-color: lightgrey;*/
+    background-color:rgb(255,250,251);
     width: 50%;
     margin: 3% auto;
     padding: 5% 0; 
     font-size: 3vw;
+    /* border-radius: 15px 10px 25px 5px; */
 }
 
 .mainPortion > div {
     text-align: center;
     margin: auto;
+    
 }
 .parklist{
     padding: 3%;
+    background-color: rgb(255,250,251);
+    color: rgb(137,137,128);
+    
 }
 img{
     border-radius: 25px;
+    
 }
 a{
     text-decoration: none;
@@ -70,5 +81,6 @@ a{
 
 #greeting {
     text-align: center;
-    background-color:#9DBFAF;
+    background-color: rgb(222,242,200);
+    color: rgb(137,137,128);
 }

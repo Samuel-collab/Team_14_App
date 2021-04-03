@@ -44,39 +44,40 @@ function addParkListener(id) {
 
 
 
-// // get PARKID from doc and pass it to next page.
-// function passParkId2() {
-//     db.collection("parks")
-//         .where("name", "==", "Central Park") //new query to look for field in a set
-//         .get() //Read
-//         .then(function(snapcollection) {
-//             snapcollection.forEach(doc => {
-//                 console.log(doc.data());
-//                 console.log(doc.id);
-//                 var id = doc.id;    
-//                 addParkListener2(id);
-//             });
-//         })
-// }
-// passParkId2();
+// get PARKID from doc and pass it to next page.
+function passParkId2() {
+    db.collection("parks")
+        .where("name", "==", "Barnet Marine Park") //new query to look for field in a set
+        .get() //Read
+        .then(function(snapcollection) {
+            snapcollection.forEach(doc => {
+                console.log(doc.data());
+                console.log(doc.id);
+                var id = doc.id;    
+                addParkListener2(id);
+            });
+        })
+}
+passParkId2();
 
 
 
-// // Add event listener for"see the parkReview" and add PARKID in the url
-// function addParkListener2(id) {
-//     var a = document.getElementsByClassName("cp");
-//     if (a) {
-//         for (var i = 0; i < a.length; i++) {
-//             a[i].addEventListener('click', function() {
-//                 console.log("cp was clicked!")
-//                 // window.location.href = "details.html";
-//                 // When we redirect, tack on after "?" the id of the webcam
-//                 window.location.href = "parkDetail.html?id=" + id;
-//             });
-//         }
+// Add event listener for"see the parkReview" and add PARKID in the url
+function addParkListener2(id) {
+    var a = document.getElementsByClassName("cp");
+    if (a) {
+        for (var i = 0; i < a.length; i++) {
+            a[i].addEventListener('click', function() {
+                console.log("cp was clicked!");
+                console.log(id)
+                // window.location.href = "details.html";
+                // When we redirect, tack on after "?" the id of the webcam
+                window.location.href = "parkDetail.html?id=" + id;
+            });
+        }
 
-//     }
-// }
+    }
+}
 
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Putting park elements onto the page, and changing its order based on sort */

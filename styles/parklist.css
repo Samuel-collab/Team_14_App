@@ -3,12 +3,12 @@
     padding: 0;
 }
 
-
 h1{
     text-align: center;
-
     margin: 5%;
     font-size: 3rem;
+
+    background-color: rgb(197,218,193);
 }
 .header {
     width:100%;
