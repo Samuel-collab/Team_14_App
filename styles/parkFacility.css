@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(197,218,193);
+}
+
 .container {
     width: 100%;
 }
@@ -34,6 +38,10 @@
     grid-gap: 2%;
     margin: 5%;
     text-align: center;
+
+
+    
+
 }
 
 .button {
