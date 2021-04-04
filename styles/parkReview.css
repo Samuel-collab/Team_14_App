@@ -55,61 +55,7 @@ body {
     background-color: rgb(248, 249, 250);
 }
 
-
-/* .star {
-    padding: 0;
-    float: left;
-    width: 40px;
-    height: 40px;
-    background: yellow;
-    clip-path: polygon(50% 0%, 63% 38%, 100% 38%, 69% 59%, 82% 100%, 50% 75%, 18% 100%, 31% 59%, 0 38%, 37% 38%);
-}
-
-.halfStar {
-    background: linear-gradient(to right, yellow 50%, white 50%);
-} */
-
-
-/* .top3 {
-    text-align: center;
-} */
-
-.afterThumb {
-    font-family: 'icomoon';
-    font-size: 1.5em;
-    font-weight: bold;
-    vertical-align: top;
-    text-decoration: none;
-}
-
-.mood {
-    width: 2em;
-}
-
-.afterThumb img {
-    margin-left: 20px;
-}
-
-
-/* .top4 {
-    margin-top: 10px;
-    text-align: center;
-}
-
-.top4 p {
-    text-align: left;
-}
-
-.top4 img {
-    width: 50vw;
-}
-
-.top5 {
-    margin-top: 10px;
-    text-align: center;
-} */
-
-.btn-primary {
+* .btn-primary {
     width: 100px;
     border-color: rgb(243, 243, 243);
 }
@@ -145,7 +91,7 @@ body {
 /* Place text to the right */
 
 .right {
-    text-align: right;
+    text-align: center;
 }
 
 
@@ -162,6 +108,7 @@ body {
 
 .bar-container {
     width: 100%;
+    margin-left: 10px;
     background-color: #f1f1f1;
     text-align: center;
     color: white;
@@ -171,33 +118,23 @@ body {
 /* Individual bars */
 
 .bar-5 {
-    width: 60%;
     height: 18px;
     background-color: #4CAF50;
 }
 
 .bar-4 {
-    width: 30%;
     height: 18px;
     background-color: #2196F3;
 }
 
 .bar-3 {
-    width: 10%;
     height: 18px;
     background-color: #00bcd4;
 }
 
 .bar-2 {
-    width: 4%;
     height: 18px;
     background-color: #ff9800;
-}
-
-.bar-1 {
-    width: 15%;
-    height: 18px;
-    background-color: #f44336;
 }
 
 .reviewHeader {
@@ -217,9 +154,15 @@ body {
     margin: 0 20px 0 20px;
 }
 
-.reviewBody p {
-    font-size: 1.5rem;
+.comment {
+    width: 100%;
     word-wrap: break-word;
+}
+
+#goToRate {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
 }
 
 

@@ -49,11 +49,17 @@ File: RatePage.html
       parkReview.html
       login.html(add animation)
       parkdetail.html(add carousel)
+      rate.css
+      parkRiew.css
+      parkRate.js
+      parkReview.js
+      parklist.js
 
 Name: Samuel Cheon
 File: sort.html
 login.html
 navbar and footer in each file
+ parklist.js
 
 Name: Kwanyong Jo
 File: main.html
