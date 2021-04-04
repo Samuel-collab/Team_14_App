@@ -37,8 +37,10 @@ function getDetails() {
         .then(function(doc) {
             var name = doc.data().name;
             var address = doc.data().address;
+            var img = doc.data().image;
             $(".infroText .p1").text(name);
             $(".infroText .p2").text(address);
+            $("#parkimg").append("<img src= '" + img + "'></img>");
         })
 
 }
@@ -102,10 +104,16 @@ function add() {
                 Cleaness: r3,
                 Parkinglot: r4,
                 Total: total,
-                average: total / 4,
+                average: aver,
                 username: uname,
                 Comment: comment.value,
                 createdAt: firebase.firestore.FieldValue.serverTimestamp()
+            })
+        db.collection("parks")
+            .doc(id)
+            .update({
+                score_total: firebase.firestore.FieldValue.increment(aver),
+                score_count: firebase.firestore.FieldValue.increment(1),
             })
         console.log("done: " + title.value);
 
@@ -126,31 +134,37 @@ function caculateRating() {
             bathroom_total: firebase.firestore.FieldValue.increment(r2),
             parkinglot_count: firebase.firestore.FieldValue.increment(1),
             parkinglot_total: firebase.firestore.FieldValue.increment(r4),
+            parkinglot_count: firebase.firestore.FieldValue.increment(1),
         })
         .then(() => {
             db.collection("parks")
                 .doc(id)
                 .get()
                 .then((doc) => {
-                    var crowdedness_total = doc.data().clean_total;
-                    var crowdedness_count = doc.data().clean_count;
-                    var crowdedness_average = crowdedness_total / crowdedness_count;
+                    var crowdedness_total = doc.data().crowdedness_total;
+                    var crowdedness_count = doc.data().crowdedness_count;
+                    var crowdedness_average = roundHalf(crowdedness_total / crowdedness_count);
+
+                    console.log(crowdedness_total);
+                    console.log(crowdedness_count);
+                    console.log(crowdedness_total / crowdedness_count);
+                    console.log(crowdedness_average);
 
                     var clean_total = doc.data().clean_total;
                     var clean_count = doc.data().clean_count;
-                    var clean_average = clean_total / clean_count;
+                    var clean_average = roundHalf(clean_total / clean_count);
 
-                    var bathroom_total = doc.data().clean_total;
-                    var bathroom_count = doc.data().clean_count;
-                    var bathroom_average = bathroom_total / bathroom_count;
+                    var bathroom_total = doc.data().bathroom_total;
+                    var bathroom_count = doc.data().bathroom_count;
+                    var bathroom_average = roundHalf(bathroom_total / bathroom_count);
 
-                    var bathroom_total = doc.data().clean_total;
-                    var bathroom_count = doc.data().clean_count;
-                    var bathroom_average = bathroom_total / bathroom_count;
+                    var parkinglot_total = doc.data().parkinglot_total;
+                    var parkinglot_count = doc.data().parkinglot_count;
+                    var parkinglot_average = roundHalf(parkinglot_total / parkinglot_count);
 
-                    var parkinglot_total = doc.data().clean_total;
-                    var parkinglot_count = doc.data().clean_count;
-                    var parkinglot_average = parkinglot_total / parkinglot_count;
+                    var score_total = doc.data().score_total;
+                    var score_count = doc.data().score_count;
+                    var score = roundHalf(score_total / score_count);
                     db.collection("parks")
                         .doc(id)
                         .update({
@@ -158,6 +172,7 @@ function caculateRating() {
                             crowdedness_rate: crowdedness_average,
                             bathroom_rate: bathroom_average,
                             parkinglot_rate: parkinglot_average,
+                            score: score,
                         })
                 })
         })
@@ -198,6 +213,9 @@ function getFieldBackToZero() {
                             parkinglot_count: 0,
                             parkinglot_total: 0,
                             parkinglot_rate: 0,
+                            score_count: 0,
+                            score_total: 0,
+                            score: 0,
                         }).then(() => {
                             console.log("back to 0");
                         })

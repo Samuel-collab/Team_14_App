@@ -19,6 +19,9 @@ function setup() {
         name: "Burnaby Mountain Park",
         phone_number: "(604) 294 - 7450",
         sorKey: "BMP",
+        score: 0,
+        score_count: 0,
+        score_total: 0,
     })
     db.collection("parks").doc("CentralPark").set({
         address: "3883 Imperial St, Burnaby, BC V5J 1A3",
@@ -34,11 +37,13 @@ function setup() {
         parkinglot_count: 0,
         parkinglot_total: 0,
         parkinglot_rate: 0,
-        image: "images\CentralPark.JPG",
+        image: "./images/CentralPark/CentralPark.JPG",
         listkey: "cp",
         name: "Central Park",
         phone_number: "(604) 294 - 7450",
-        score: 3,
+        score: 0,
+        score_count: 0,
+        score_total: 0,
         sorKey: "CP",
     })
 }

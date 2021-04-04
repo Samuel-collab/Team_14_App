@@ -69,16 +69,13 @@
         </div>
     </div>
 
-
-
-
     <!-- Park scorecard -->
     <div class="container scorecard">
         <!-- Park card -->
         <div class="row">
             <div class="col">
                 <div class="card" style="width: 18rem;">
-                    <img src="./images/Burnaby Mountain Park/bunaby mountain park.jpg" class="card-img-top" alt="...">
+                    <div id="parkimg"></div>
                     <div class="card-body">
                         <div class="container top1 address"></div>
                         <p></p>
@@ -86,19 +83,19 @@
                 </div>
                 <!-- Review overview-->
             </div>
-            <div class="col">
-                <span class="heading">User Rating</span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star"></span>
-                <p>4.1 average based on 254 reviews.</p>
+            <div class="col" id="userrating">
+                <span class="heading ">User Rating</span>
+                <span class="fa fa-star " id="s1"></span>
+                <span class="fa fa-star " id="s2"></span>
+                <span class="fa fa-star " id="s3"></span>
+                <span class="fa fa-star " id="s4"></span>
+                <span class="fa fa-star" id="s5"></span>
+                <p><span id="reviewaver"></span> average based on <span id="reviewtotal"></span> reviews.</p>
                 <hr style="border:3px solid #f1f1f1">
 
                 <div class="row">
                     <div class="side">
-                        <div>5 star</div>
+                        <div>Crowdedness</div>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -106,21 +103,11 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>150</div>
+                        <div id="crowdbarnum">150</div>
                     </div>
+
                     <div class="side">
-                        <div>4.5 star</div>
-                    </div>
-                    <div class="middle">
-                        <div class="bar-container">
-                            <div class="bar-5"></div>
-                        </div>
-                    </div>
-                    <div class="side right">
-                        <div>150</div>
-                    </div>
-                    <div class="side">
-                        <div>4 star</div>
+                        <div>Bathroom</div>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -128,21 +115,11 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>63</div>
+                        <div id="bathroombarnum">63</div>
                     </div>
+
                     <div class="side">
-                        <div>3.5 star</div>
-                    </div>
-                    <div class="middle">
-                        <div class="bar-container">
-                            <div class="bar-4"></div>
-                        </div>
-                    </div>
-                    <div class="side right">
-                        <div>63</div>
-                    </div>
-                    <div class="side">
-                        <div>3 star</div>
+                        <div>Cleaness</div>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
@@ -150,102 +127,29 @@
                         </div>
                     </div>
                     <div class="side right">
-                        <div>15</div>
+                        <div id="cleanbarnum">15</div>
                     </div>
+
                     <div class="side">
-                        <div>2.5 star</div>
-                    </div>
-                    <div class="middle">
-                        <div class="bar-container">
-                            <div class="bar-4"></div>
+                        <div>Parkinglot
                         </div>
-                    </div>
-                    <div class="side right">
-                        <div>63</div>
-                    </div>
-                    <div class="side">
-                        <div>2 star</div>
                     </div>
                     <div class="middle">
                         <div class="bar-container">
                             <div class="bar-2"></div>
                         </div>
                     </div>
-                    <div class="side right">
-                        <div>6</div>
-                    </div>
-                    <div class="side">
-                        <div>1.5 star</div>
-                    </div>
-                    <div class="middle">
-                        <div class="bar-container">
-                            <div class="bar-4"></div>
-                        </div>
-                    </div>
-                    <div class="side right">
-                        <div>63</div>
-                    </div>
-                    <div class="side">
-                        <div>1 star</div>
-                    </div>
-                    <div class="middle">
-                        <div class="bar-container">
-                            <div class="bar-1"></div>
-                        </div>
-                    </div>
-                    <div class="side right">
-                        <div>20</div>
+                    <div class="side right" id="parkingbarnum">
+                        6
                     </div>
                 </div>
-
-                <!-- <span class="star"></span>
-                    <span class="star"></span>
-                    <span class="star"></span>
-                    <span class="star"></span>
-                    <span class="star halfStar"></span>
-                    <a class="afterThumb" href="./RatePage.html" target="_blank"> 2688</a>
-                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-                    <img class="mood smile" src="./images/baseline_mood_black_18dp.png">
-                    <img class="mood smile" src="./images/baseline_mood_bad_black_18dp.png"> -->
             </div>
 
         </div>
     </div>
-    <!-- List reviews-->
+    <!-- List reviews (created dynamically)-->
 
-    <div class="reviewHeader">
-        <img src="./images/profile/user1.jpg" alt="">
-        <h5>
-            <span id="userName"></span>ttttttttt
-        </h5>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-    </div>
-
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span class="box_{{id}}">...</span><span id="userID">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button onclick="readMore()" id="myBtn">Read more</button>
-    </div>
-
-    <div class="reviewHeader">
-        <img src="./images/profile/user1.jpg" alt="">
-        <h5>
-            <span id="userName"></span>ttttttttt
-        </h5>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-    </div>
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
-        <button onclick="readMore()" id="myBtn">Read more</button>
-    </div>
+    <!-- Button to rate page-->
 
     <a href="./RatePage.html" class="btn btn-primary" id="goToRate" target="_blank">Rate</a>
 
@@ -272,7 +176,7 @@
             </a>
         </li>
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="BACK">
-            <a class="nav-link" href="#" onclick = "goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+            <a class="nav-link" href="#" onclick="goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
                     class="bi bi-arrow-return-left click-me" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
                         d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
