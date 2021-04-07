@@ -38,3 +38,18 @@ function addParkListener(id) {
         });
     }
 }
+
+// Add carousel pictures based on parkid.
+function carousel() {
+    db.collection("parks")
+        .doc(id)
+        .get()
+        .then((doc) => {
+            $("#c1").attr("src", doc.data().carousel[0]);
+            $("#c2").attr("src", doc.data().carousel[1]);
+            $("#c3").attr("src", doc.data().carousel[2]);
+            $("#c4").attr("src", doc.data().carousel[3]);
+            $("#c5").attr("src", doc.data().carousel[4]);
+        })
+}
+carousel();
