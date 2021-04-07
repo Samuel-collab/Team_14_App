@@ -167,7 +167,7 @@ addListenerCleanliness();
 
 function doThis() {
     var incre = 1;
-    db.collection("parks").orderBy("score", "desc")
+    db.collection("parks").orderBy("clean_rate", "desc")
         .get().then(function(snap) {
             snap.forEach(function(doc) {
                 console.log(doc.data().name);
@@ -175,6 +175,82 @@ function doThis() {
                 console.log(key)
                 var newPosition = "park" + incre;
                 incre = incre + 1;
+                // var e = document.getElementsByClassName(key);
+                // console.log(">>",e);
+                // e.id = newPosition;
+                // console.log(">>",e);
+                $(key).attr('id', newPosition);
+            })
+        })
+}
+
+function addListenerBathroom() {
+    document.getElementById("bathroom").addEventListener("click", function() {
+        doThis2();
+    })
+}
+addListenerBathroom();
+
+function doThis2() {
+    var incre = 1;
+    db.collection("parks").orderBy("bathroom_rate", "desc")
+        .get().then(function(snap) {
+            snap.forEach(function(doc) {
+                console.log(doc.data().name);
+                var key = "." + doc.data().sortKey;
+                console.log(key)
+                var newPosition = "park" + incre;
+                incre = incre + 1;
+                // var e = document.getElementsByClassName(key);
+                // e.id = newPosition;
+                $(key).attr('id', newPosition);
+            })
+        })
+}
+
+function addListenerParkinglot() {
+    document.getElementById("parkinglot").addEventListener("click", function() {
+        doThis3();
+    })
+}
+addListenerParkinglot();
+
+function doThis3() {
+    var incre = 1;
+    db.collection("parks").orderBy("parkinglot_rate", "desc")
+        .get().then(function(snap) {
+            snap.forEach(function(doc) {
+                console.log(doc.data().name);
+                var key = "." + doc.data().sortKey;
+                console.log(key)
+                var newPosition = "park" + incre;
+                incre = incre + 1;
+                // var e = document.getElementsByClassName(key);
+                // e.id = newPosition;
+                $(key).attr('id', newPosition);
+            })
+        })
+}
+
+function addListenerCrowdedness() {
+    document.getElementById("crowdedness").addEventListener("click", function() {
+        doThis4();
+    })
+}
+addListenerCrowdedness();
+
+function doThis4() {
+    var incre = 1;
+    db.collection("parks").orderBy("crowdedness_rate", "desc")
+        .get().then(function(snap) {
+            snap.forEach(function(doc) {
+                console.log(doc.data().name);
+                var key = "." + doc.data().sortKey;
+                console.log(key)
+                var newPosition = "park" + incre;
+                incre = incre + 1;
+                // var e = document.getElementsByClassName(key);
+                // e.id = newPosition;
                 $(key).attr('id', newPosition);
             })
         })
