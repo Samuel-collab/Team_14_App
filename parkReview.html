@@ -26,6 +26,7 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
+
     <ul class="nav nav-pills nav-fill navbar navbar-light bg-light fixed-top">
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="PARKS">
             <a class="nav-link" aria-current="page" href="parklistEDIT.html">
@@ -63,27 +64,28 @@
 
     <br/> <br/> <br/> <br/> <br/>
     <!-- Park name -->
-    <div class="container">
-        <div class="container parkname">
+    <div class="container-sm">
+        <div class="container-sm parkname">
             <a class="parkLink" href="parkDetail.html"></a>
         </div>
     </div>
 
     <!-- Park scorecard -->
-    <div class="container scorecard">
+    <div class="container-sm scorecard">
         <!-- Park card -->
         <div class="row">
-            <div class="col">
+            <div class="container-sm">
                 <div class="card" style="width: 18rem;">
-                    <div id="parkimg"></div>
                     <div class="card-body">
                         <div class="container top1 address"></div>
                         <p></p>
                     </div>
+                    <div id="parkimg"></div>
+
                 </div>
-                <!-- Review overview-->
             </div>
-            <div class="col" id="userrating">
+            <!-- Review overview-->
+            <div class="container-sm" id="userrating">
                 <span class="heading ">User Rating</span>
                 <span class="fa fa-star " id="s1"></span>
                 <span class="fa fa-star " id="s2"></span>

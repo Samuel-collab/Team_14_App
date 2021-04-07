@@ -36,11 +36,9 @@ function getDetails() {
         .get()
         .then(function(doc) {
             var name = doc.data().name;
-            var address = doc.data().address;
             var img = doc.data().image;
-            $(".infroText .p1").text(name);
-            $(".infroText .p2").text(address);
-            $("#parkimg").append("<img src= '" + img + "'></img>");
+            $(".card-body p").text(name);
+            $(".card-img-top").attr("src", img);
         })
 
 }
