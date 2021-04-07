@@ -47,3 +47,18 @@ function setup() {
         sorKey: "CP",
     })
 }
+
+// Add carousel pics pathes into database
+function addCarousel() {
+    db.collection("parks").doc("Burnaby Mountain Park").update({
+        carousel: ["./images/Burnaby Mountain Park/1.jpg", "./images/Burnaby Mountain Park/2.jpg", "./images/Burnaby Mountain Park/3.jpg",
+            "./images/Burnaby Mountain Park/4.jpg", "./images/Burnaby Mountain Park/5.jpg"
+        ]
+    })
+    db.collection("parks").doc("CentralPark").update({
+        carousel: ["./images/CentralPark/1.jpg", "./images/CentralPark/2.jpg", "./images/CentralPark/3.jpg",
+            "./images/CentralPark/4.jpg", "./images/CentralPark/5.jpg"
+        ]
+    })
+    console.log("carousel pictures have been added");
+}
