@@ -79,6 +79,44 @@ function addParkListener2(id) {
     }
 }
 
+
+//Deer lake park
+
+// get PARKID from doc and pass it to next page.
+function passParkIdGeneral(listkey, className) {
+    db.collection("parks")
+        .where("listkey", "==", listkey) //new query to look for field in a set
+        .get() //Read
+        .then(function(snapcollection) {
+            snapcollection.forEach(doc => {
+                console.log(doc.data());
+                console.log(doc.id);
+                var id = doc.id;
+                console.log(id);
+                addParkListenerGeneral(id, className);
+            });
+        })
+}
+passParkIdGeneral("dlp", "dlp");
+
+// Add event listener for"see the parkReview" and add PARKID in the url
+function addParkListenerGeneral(id, className) {
+    var a = document.getElementsByClassName(className);
+    if (a) {
+        for (var i = 0; i < a.length; i++) {
+            a[i].addEventListener('click', function() {
+                console.log(id + "was clicked!")
+
+                // window.location.href = "details.html";
+                // When we redirect, tack on after "?" the id of the webcam
+                window.location.href = "parkDetail.html?id=" + id;
+            });
+        }
+
+    }
+}
+
+
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Putting park elements onto the page, and changing its order based on sort */
 var increm = 1;

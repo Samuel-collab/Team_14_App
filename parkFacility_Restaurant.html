@@ -14,10 +14,12 @@
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./styles/parkMap.css">
+    <link rel="stylesheet" href="./styles/parkFacility_Restaurant.css">
     <link rel="stylesheet" href="./styles/navbar.css">
     <link rel="stylesheet" href="./styles/test.css">
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+
 </head>
 
 <body>
@@ -26,6 +28,36 @@
     <!-- The following is HTML for layout -->
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
+    <!-- <nav id="ownNav">
+        <ul>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span>Parks</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span>Chat</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span>Rate</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span></span>
+                    <span>Alarm</span>
+                </a>
+            </li>
+        </ul>
+    </nav> -->
+
     <ul class="nav nav-pills nav-fill navbar navbar-light bg-light fixed-top">
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="PARKS">
             <a class="nav-link" aria-current="page" href="parklistEDIT.html">
@@ -51,7 +83,7 @@
                 <p style="margin: 0 0 0 0; padding: 0 0 0 0; color:black;">Rate</p>
             </a>
         </li>
-        <li class="nav-item btn click-me disabled" data-bs-toggle="tooltip" data-bs-placement="top" title="ALARM">
+        <li class="nav-item btn click-me disabled toggle" data-bs-toggle="tooltip" data-bs-placement="top" title="ALARM">
             <a class="nav-link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-bell-fill click-me" viewBox="0 0 16 16">
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
@@ -61,32 +93,65 @@
         </li>
     </ul>
 
-    <br/> <br/> <br/>
+    <br/> <br/> <br/> <br/> <br/>
 
     <div class="container">
         <div class="top">
             <div class="topleft toppart">
-                <h1>Burnaby Mountain Park</h1>
+                <h1>Horizontal Restaurant</h1>
                 <div class="parkinfo">
                     <b>Address</b> : </br>
-                    100 Centennial Way</br>
-                    Burnaby, BC V5A 2X9</br>
+                    7600 Halifax St</br>
+                    Burnaby, BC V5A 4H2</br>
                     <b>Phone</b> : </br>
-                    (604) 294-7450
+                    (604) 297-4888
                 </div>
             </div>
             <div class="topright toppart">
-                <img class="parkMap" src="images\BurnabyMountatinPark.JPG" width=100%>
+                <img src="images\Burnaby Mountain Park/HoraizonRest.JPG">
+            </div>
+
+        </div>
+
+        <div class="header">
+            <div class="restaurant" id="mainImg">
+                <div class = "image image1">
+                    <img src="images\Burnaby Mountain Park/HoraizonRest2.JPG" >
+                </div>
+            </div>
+
+            <div class="restaurant image2">
+                <div class = "image image1">
+                    <img src="images\Burnaby Mountain Park/HoraizonRest3.JPG" >
+                </div>
+                
+            </div>
+
+            <div class="restaurant image3">
+                <div class = "image image1">
+                    <div>Main menu</div>
+                    <h3>Steak</h3>
+                    <ul>
+                        <li>10oz New York Striploin</li>
+                        <li>12oz Ribeye</li>
+                        <li>6oz Filet Migono & Black Tiger Prawns</li>
+                    </ul>
+                    <h3>Meat</h3>
+                    <ul>
+                        <li>Free Range Chicken & Pork Back Ribs</li>
+                        <li>Short Ribs</li>
+                        <li>Rack of Lamb</li>
+                    </ul>
+                    <h3>Seafood</h3>
+                    <ul>
+                        <li>Wild BC Salmon</li>
+                        <li>Pacific Cioppino</li>
+                        <li>Maple Salmon</li>
+                    </ul>
+                </div>
+                
             </div>
         </div>
-
-        <div class="body">
-
-            <div><img class="parkMap" src="images\BurnabyMountainParkMap.JPG"></div>
-            <div class="nameOfPark"></div>
-
-        </div>
-
     </div>
 
 
@@ -112,18 +177,20 @@
                 </svg> <p style = "margin: 0 0 0 0; padding: 0 0 0 0; color: black;">User</p></a>
         </li>
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="HOME">
-            <a class="nav-link" href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+            <a class="nav-link" href="main.html"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="black" class="bi bi-house-door-fill click-me" viewBox="0 0 16 16" style="z-index: 1">
                     <path
                         d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z" />
                 </svg><p style = "margin: 0 0 0 0; padding: 0 0 0 0; color:black;">Home</p></a>
         </li>
         <li class="nav-item btn click-me" data-bs-toggle="tooltip" data-bs-placement="top" title="BACK">
-            <a class="nav-link" href="#" onclick="goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
-                    class="bi bi-arrow-return-left click-me" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd"
-                        d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
-                </svg><p style = "margin: 0 0 0 0; padding: 0 0 0 0; color: black;">Back</p></a>
+            <a class="nav-link" href="#" onclick="goBack()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="black" class="bi bi-arrow-return-left click-me" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z" />
+              </svg>
+              <p style="margin: 0 0 0 0; padding: 0 0 0 0; color: black;">Back</p>
+            </a>
         </li>
 
 
@@ -132,22 +199,12 @@
         <!----------------------------------------------->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
         </script>
-        <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-        <script src="./scripts/firebase_api_team_14.js"></script>
-        <script src="./scripts/parkFacility.js"></script>
-        <script src="./scripts/parkMap.js"></script>
 
         <!--------------------------------------------------------------------->
         <!-- JS files: Your own JavaScript functions included here    -->
         <!--------------------------------------------------------------------->
-        <script src="scripts/my_functions.js"></script>
-        <script src="scripts/test.js"></script>
-
-
+        <script src="scripts/test.js">
+        </script>
 </body>
 
 </html>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(197,218,193);
+}
+
 .container {
     width: 100%;
 }
@@ -16,11 +20,11 @@
     margin: 5%;
 }
 .toppart h1{
-    font-size: 3vw;
+    font-size: 5rem;
     text-align: center;
 }
 .toppart div{
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 .parkinfo {
@@ -34,6 +38,10 @@
     grid-gap: 2%;
     margin: 5%;
     text-align: center;
+
+
+    
+
 }
 
 .button {
