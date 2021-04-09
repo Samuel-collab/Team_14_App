@@ -116,7 +116,7 @@ body {
 .bar-container {
     width: 100%;
     margin-left: 0px;
-    background-color: #f1f1f1;
+    background-color: rgb(222,242,200);
     text-align: center;
     color: white;
 }
@@ -161,6 +161,7 @@ body {
     display: inline-block;
     margin: 0 20px 0 20px;
     line-height: 5vh;
+    font-size: 1rem;
 }
 
 .comment {
@@ -205,3 +206,28 @@ body {
         display: none;
     }
 }
+
+#stars{
+    float:right;
+    margin-right: 10px;
+}
+
+/* .reviewHeader {
+    height: 5vh;
+    margin-top: 10px;
+    background-color: rgb(243, 243, 243);
+    background-color: rgb(222,242,200);
+    display : grid;
+    grid-template-columns: 33% 33% 33%;
+}
+
+#userIcon {
+    grid-column: 1/ span 1;
+    height: 100%;
+    width: 100%;
+}
+
+.reviewHeader h5 {
+    grid-column: 2/ span 1;
+} */
+

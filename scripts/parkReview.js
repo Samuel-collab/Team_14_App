@@ -372,30 +372,38 @@ function createReviewDom(docid) {
     h5.append(span);
     review.append(h5);
 
+    let stars = $("<span id = 'stars'><span>");
+    h5.after(stars);
+
     let star1 = $("<span></span>");
     star1.addClass("fa fa-star");
     star1.attr("id", "star1" + docid + "");
-    h5.after(star1);
+    stars.append(star1);
+    // h5.after(star1);
 
     let star2 = $("<span></span>");
     star2.addClass("fa fa-star");
     star2.attr("id", "star2" + docid + "");
-    star1.after(star2);
+    stars.append(star2);
+    // star1.after(star2);
 
     let star3 = $("<span></span>");
     star3.addClass("fa fa-star");
     star3.attr("id", "star3" + docid + "");
-    star2.after(star3);
+    stars.append(star3);
+    // star2.after(star3);
 
     let star4 = $("<span></span>");
     star4.addClass("fa fa-star");
     star4.attr("id", "star4" + docid + "");
-    star3.after(star4);
+    stars.append(star4);
+    // star3.after(star4);
 
     let star5 = $("<span></span>");
     star5.addClass("fa fa-star");
     star5.attr("id", "star5" + docid + "");
-    star4.after(star5);
+    stars.append(star5);
+    // star4.after(star5);
 
     let div2 = $("<div></div>");
     div2.attr("id", "comment" + docid + "");
