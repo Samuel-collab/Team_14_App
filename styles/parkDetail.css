@@ -1,3 +1,4 @@
+@media (max-width: 600px) {
 * {
     padding: 0;
     margin: 0;
@@ -9,20 +10,41 @@ body {
 }
 
 .container {
-    width: 100%;
+    height: 70vh;
+    width: 95%;
     display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 30% 70%;
 }
 
-.top {
-    width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 2%;
+.bodypart {
+    font-size: 3rem;
+}
+
+.topleft {
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+}
+
+.topright {
+    grid-column: 2/ span 1;
+    grid-row: 1/ span 1;
+    height: 100%;
+    width: 100%;    
+}
+
+#carouselExampleControls {
+    height: 100%;
+    width: 100%;
+}
+
+.toppart {
+    font-size: 0.9rem;
 }
 
 .toppart h1 {
-    font-size: 16px;
-    font-size: 4vw;
+    /* font-size: 16px;
+    font-size: 4vw; */
     text-align: center;
     font-weight: bold;
 }
@@ -37,22 +59,84 @@ body {
 }
 
 .body {
-    width: 90%;
+    grid-row: 2/ span 1;
+    grid-column: 1/ span 2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-gap: 2%; */
-    /* margin: 10%; */
-    margin: 3%;
+    /* grid-template-columns: 1fr 1fr;
+    grid-gap: 2%; 
+    margin: 10%; 
+    margin: 3%; */
     text-align: center;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+}
+
+.btl {
+    grid-column: 1/ span 1;
+    grid-row: 1 / span 1;
+    padding: 10px;
+}
+
+.btr {
+    grid-column: 2/ span 1;
+    grid-row: 1 / span 1;
+    padding: 10px;
+}
+
+.bbl {
+    grid-column: 1/ span 1;
+    grid-row: 2 / span 1;
+    padding: 10px;
+}
+
+.bbr {
+    grid-column: 2/ span 1;
+    grid-row: 2 / span 1;
+    padding: 10px;
+    
 }
 
 .bodypart {
-    font-size: 10rem;
-    margin: 20px;
+    /* font-size: 10rem; */
+    margin: 10px;
+}
+
+.bodyfirst {
+    font-size: 3.5rem;
+    height: 53%;
+}
+
+.facility {
+    padding-bottom: 80px;
+}
+
+#c1 {
+    height: 120px;
+    width: 100%;
+}
+
+#c2 {
+    height: 120px;
+    width: 100%;
+}
+
+#c3 {
+    height: 120px;
+    width: 100%;
+}
+
+#c4 {
+    height: 120px;
+    width: 100%;  
+}
+
+#c5 {
+    height: 120px;
+    width: 100%;
 }
 
 .font {
-    font-size: 3rem;
+    /* font-size: 3rem; */
 }
 
 .font a {
@@ -79,4 +163,149 @@ body {
 
 .iconColor {
     color: rgb(20, 20, 9);
+    }
+}
+
+/***************************************Media Query - 600px*************************************/
+@media (min-width: 600px) {
+
+    body {
+        background-color: rgb(197, 218, 193);
+    }
+
+    .container {
+        height: 100vh;
+        width: 95%;
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 30% 70%;
+    }
+    
+    .bodypart {
+        font-size: 6rem;
+    }
+    
+    .topleft {
+        grid-column: 1/ span 1;
+        grid-row: 1/ span 1;
+    }
+    
+    .topright {
+        grid-column: 2/ span 1;
+        grid-row: 1/ span 1;
+        height: 100%;
+        width: 100%;    
+        padding-left: 80px;
+    }
+    
+    #carouselExampleControls {
+        height: 90%;
+        width: 90%;
+    }
+    
+    .toppart {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .toppart h1 {
+        /* font-size: 16px;
+        font-size: 4vw; */
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    .toppart h3 {
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    .parkinfo p {
+        font-size: 1rem;
+    }
+    
+    .body {
+        grid-row: 2/ span 1;
+        grid-column: 1/ span 2;
+        display: grid;
+        /* grid-template-columns: 1fr 1fr;
+        grid-gap: 2%; 
+        margin: 10%; 
+        margin: 3%; */
+        text-align: center;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+    }
+    
+    .btl {
+        grid-column: 1/ span 1;
+        grid-row: 1 / span 1;
+        padding: 10px;
+    }
+    
+    .btr {
+        grid-column: 2/ span 1;
+        grid-row: 1 / span 1;
+        padding: 10px;
+    }
+    
+    .bbl {
+        grid-column: 1/ span 1;
+        grid-row: 2 / span 1;
+        padding: 10px;
+    }
+    
+    .bbr {
+        grid-column: 2/ span 1;
+        grid-row: 2 / span 1;
+        padding: 10px;
+        
+    }
+    
+    .bodypart {
+        /* font-size: 10rem; */
+        margin: 10px;
+    }
+    
+    .bodyfirst {
+        height: 53%;
+    }
+    
+    .facility {
+        padding-bottom: 80px;
+    }
+    
+    #c1 {
+        height: 240px;
+        width: 100%;
+    }
+    
+    #c2 {
+        height: 240px;
+        width: 100%;
+    }
+    
+    #c3 {
+        height: 240px;
+        width: 100%;
+    }
+    
+    #c4 {
+        height: 240px;
+        width: 100%;  
+    }
+    
+    #c5 {
+        height: 240px;
+        width: 100%;
+    }
+
+    .font {
+        /* font-size: 3rem; */
+    }
+    
+    .font a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
