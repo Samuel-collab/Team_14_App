@@ -53,6 +53,7 @@ body {
 .mainPortion {
     /*background-color: lightgrey;*/
     background-color:rgb(255,250,251);
+    background-color: rgb(222,242,200);
     width: 50%;
     margin: 3% auto;
     padding: 5% 0; 
@@ -67,13 +68,13 @@ body {
 }
 .parklist{
     padding: 3%;
-    background-color: rgb(255,250,251);
+    background-color: rgb(222,242,200);
     color: rgb(137,137,128); 
 }
 
 .rating{
     padding: 3%;
-    background-color: rgb(255,250,251);
+    background-color: rgb(222,242,200);
     color: rgb(137,137,128); 
 }
 

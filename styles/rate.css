@@ -10,6 +10,7 @@
 body {
     margin-top: 25%;
     margin-bottom: 15%;
+    background-color: rgb(197,218,193);
 }
 
 .exitBar {
@@ -30,6 +31,7 @@ body {
 .card {
     margin: auto;
     margin-bottom: 20px;
+    background-color: rgb(222,242,200);
 }
 
 .card-text {
@@ -53,6 +55,12 @@ body {
 .title {
     height: 15vh;
     font-size: 1rem;
+}
+
+.title-text {
+    background-color: rgb(222,242,200);
+    border-color: rgb(222,242,200);
+    /* border-color: rgb(170, 170, 160); */
 }
 
 label {
@@ -81,6 +89,8 @@ input {
 
 .comment input {
     height: 75%;
+    background-color: rgb(222,242,200);
+    border-color: rgb(222,242,200);
 }
 
 .btn {
@@ -124,7 +134,7 @@ input {
 }
 
 .rating>label {
-    color: #ddd;
+    color: rgb(137,137,128);
     float: right;
 }
 
@@ -158,3 +168,12 @@ input {
 .rating>input:checked~label:hover~label {
     color: #FFED85;
 }
+
+#save {
+    
+    background-color: rgb(222,242,200);
+}
+
+/* .col-sm {
+    color: rgb(137,137,128);
+} */

@@ -362,7 +362,7 @@ function createReviewDom(docid) {
     let review = $("<div></div>");
     review.addClass("reviewHeader");
 
-    let img = $("<img></img>");
+    let img = $("<img id = 'userIcon'></img>");
     img.attr("src", "./images/profile/user1.jpg");
     review.append(img)
 
