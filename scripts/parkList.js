@@ -116,6 +116,61 @@ function addParkListenerGeneral(id, className) {
     }
 }
 
+//Robert Burnaby Park
+
+// get PARKID from doc and pass it to next page.
+function passParkId3() {
+    db.collection("parks")
+        .where("name", "==", "Robert Burnaby Park") //new query to look for field in a set
+        .get() //Read
+        .then(function(snapcollection) {
+            snapcollection.forEach(doc => {
+                console.log(doc.data());
+                console.log(doc.id);
+                var id = doc.id;
+                console.log(id);
+                addParkListener3(id);
+            });
+        })
+}
+passParkId3();
+
+// Add event listener for"see the parkReview" and add PARKID in the url
+function addParkListener3(id) {
+    var a = document.getElementsByClassName("rbp");
+    if (a) {
+        for (var i = 0; i < a.length; i++) {
+            a[i].addEventListener('click', function() {
+                console.log(id + "was clicked!")
+
+                // window.location.href = "details.html";
+                // When we redirect, tack on after "?" the id of the webcam
+                window.location.href = "parkDetail.html?id=" + id;
+            });
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Putting park elements onto the page, and changing its order based on sort */
@@ -141,23 +196,11 @@ function addParks() {
         })
     })
 }
-// addParks();
 
-// function addParks() {
-//     db.collection("parks").get().then(function(snap) {
-//         snap.forEach(function(doc) {
-//             console.log(increm);
-//             var id = "park" + increm;
-//             increm = increm + 1;
-//             console.log(id)
-//             console.log(doc.data());
-//         })
-//     })
-// }
-// addParks();
 
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Second attempt at sort feature - these time using id mainpulation *******//
+////////////////////////////////////////////////////////////////////////////////////
 function addListenerCleanliness() {
     document.getElementById("cleanliness").addEventListener("click", function() {
         doThis();

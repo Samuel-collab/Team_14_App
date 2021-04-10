@@ -159,7 +159,7 @@ body {
 
 .reviewHeader h5 {
     display: inline-block;
-    margin: 0 20px 0 20px;
+    /* margin: 0 10px 0 10px; */
     line-height: 5vh;
     font-size: 1rem;
 }
