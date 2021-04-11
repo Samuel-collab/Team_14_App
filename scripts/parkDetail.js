@@ -20,7 +20,11 @@ function getDetails() {
             $("#parkName").text(name);
             $("#address").text("Address: " + address);
             addParkListener(id);
-            addParkListenerFacility(id)
+            addParkListenerFacility(id);
+            addParkListenerParkMap(id)
+
+            var newUrl = doc.data().googleMap;
+            $("#googleMapHere").attr("href",newUrl);
             console.log(id);
         })
 }
@@ -40,7 +44,7 @@ function addParkListener(id) {
     }
 }
 
-// Add event listener for "Facility" and add PARKID in the url
+// Add event listener for "Facility" and add PARKID in the url when changing window location
 function addParkListenerFacility(id) {
     console.log(id);
     var a = document.getElementById("facility");
@@ -53,6 +57,18 @@ function addParkListenerFacility(id) {
     }
 }
 
+// Add event listener for "ParkMap" and add PARK ID in the url when changing window location
+function addParkListenerParkMap(id) {
+    console.log(id);
+    var a = document.getElementById("parkMap");
+    if (a) {
+        a.addEventListener("click", function(x) {
+            x.preventDefault();
+            console.log("ParkMap was clicked!");
+            window.location.href = "parkMap.html?id=" + id;
+        });
+    }
+}
 
 
 
