@@ -17,8 +17,10 @@ function getDetails() {
         .then(function(doc) {
             var name = doc.data().name;
             var address = doc.data().address;
+            var phoneNum = doc.data().phoneNumber;
             $("#parkName").text(name);
-            $("#address").text("Address: " + address);
+            $("#address").text(address);
+            $("#phoneNumber").text(phoneNum);
             addParkListener(id);
             addParkListenerFacility(id);
             addParkListenerParkMap(id)
