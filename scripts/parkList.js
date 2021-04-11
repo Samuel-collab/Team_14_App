@@ -174,28 +174,28 @@ function addParkListener3(id) {
 
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Putting park elements onto the page, and changing its order based on sort */
-var increm = 1;
+// var increm = 1;
 
-function addParks() {
-    db.collection("parks").get().then(function(snap) {
-        snap.forEach(function(doc) {
-            console.log(increm);
-            var id = "park" + increm;
-            increm = increm + 1;
-            var listKey = doc.data().listKey;
+// function addParks() {
+//     db.collection("parks").get().then(function(snap) {
+//         snap.forEach(function(doc) {
+//             console.log(increm);
+//             var id = "park" + increm;
+//             increm = increm + 1;
+//             var listKey = doc.data().listKey;
 
-            var name = "";
-            name = doc.data().name;
-            var image = "";
-            image = doc.data().image;
-            var newDom = "<div class='text'><a class='" + listKey + "' href='' target='_blank'>" + name + "</a></div><div class = 'image image1><a class= '" + listKey + "' href='parklistEDIT.html' target='_blank'><img src= '" + image + "' width=100% height = 100%></a></div>";
+//             var name = "";
+//             name = doc.data().name;
+//             var image = "";
+//             image = doc.data().image;
+//             var newDom = "<div class='text'><a class='" + listKey + "' href='' target='_blank'>" + name + "</a></div><div class = 'image image1><a class= '" + listKey + "' href='parklistEDIT.html' target='_blank'><img src= '" + image + "' width=100% height = 100%></a></div>";
 
-            document.getElementById(id).innerHTML = newDom;
+//             document.getElementById(id).innerHTML = newDom;
 
-            console.log(doc.data());
-        })
-    })
-}
+//             console.log(doc.data());
+//         })
+//     })
+// }
 
 
 ////////////////////////////////////////////////////////////////////////////////////
@@ -285,6 +285,30 @@ addListenerCrowdedness();
 function doThis4() {
     var incre = 1;
     db.collection("parks").orderBy("crowdedness_rate", "desc")
+        .get().then(function(snap) {
+            snap.forEach(function(doc) {
+                console.log(doc.data().name);
+                var key = "." + doc.data().sortKey;
+                console.log(key)
+                var newPosition = "park" + incre;
+                incre = incre + 1;
+                // var e = document.getElementsByClassName(key);
+                // e.id = newPosition;
+                $(key).attr('id', newPosition);
+            })
+        })
+}
+
+function addListenerOverall() {
+    document.getElementById("overall").addEventListener("click", function() {
+        doThis5();
+    })
+}
+addListenerOverall();
+
+function doThis5() {
+    var incre = 1;
+    db.collection("parks").orderBy("score", "desc")
         .get().then(function(snap) {
             snap.forEach(function(doc) {
                 console.log(doc.data().name);
