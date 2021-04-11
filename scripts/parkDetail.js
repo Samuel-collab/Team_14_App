@@ -20,6 +20,7 @@ function getDetails() {
             $("#parkName").text(name);
             $("#address").text("Address: " + address);
             addParkListener(id);
+            addParkListenerFacility(id)
             console.log(id);
         })
 }
@@ -38,6 +39,27 @@ function addParkListener(id) {
         });
     }
 }
+
+// Add event listener for "Facility" and add PARKID in the url
+function addParkListenerFacility(id) {
+    console.log(id);
+    var a = document.getElementById("facility");
+    if (a) {
+        a.addEventListener("click", function(x) {
+            x.preventDefault();
+            console.log("facility was clicked!");
+            window.location.href = "parkFacility.html?id=" + id;
+        });
+    }
+}
+
+
+
+
+
+
+
+
 
 // Add carousel pictures based on parkid.
 function carousel() {

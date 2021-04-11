@@ -27,21 +27,18 @@ body{
     font-size: 2rem;
 }
 
-.parkinfo {
+/* .parkinfo {
     margin-left: 25%;
-}
+} */
 
 .body{
     width:90%;
+    height: 100%;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 2%;
     margin: 5%;
     text-align: center;
-
-
-    
-
 }
 
 .button {
@@ -57,9 +54,6 @@ body{
     cursor: pointer;
     width: 80%;
   }
-  
-
-
 
 .bodypart{
     font-size: 20vw;
@@ -70,4 +64,10 @@ body{
 
 a{
     color: inherit;
+}
+
+.myButton {
+    background-color: rgb(158, 180, 153);
+    color: black;
+    border-color:rgb(158, 180, 153);
 }
