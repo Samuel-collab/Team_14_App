@@ -22,31 +22,106 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore             # Git ignore file
-├── .firebaserc            # Refer to our team firebase
-├── .firease.json          # firebase JSON file
-├── .firease.indexes.json  # firebase JSON file
-├── .firestore.rules       # firebase rules
-├── 404.html               # page not found 404 error
-├── index.html             # landing HTML file, this is what users see when you come to url
-├── login.html             # login HTML file, this what users see when you click on the user button in the footer
-├── main.html              # main HTML file, this is what users see after logging in
-├── parklistEDIT.html      # parklist HTML file, this is what users see when you click on the parklist button
-├── parkDetail.html        # parkDetail HTML file, this is what users see when you click on the park link
-├── parkrReview.html       # parkReview HTML file, this is what users see when you click on the see parkReview icon
-├── ratepage.html          # parkReview HTML file, this is what users see when you click on the  rate button
-├── parkFacility.html      # parkReview HTML file, this is what users see when you click on the see parkReview icon
+├── .gitignore                             # Git ignore file
+├── .firebaserc                            # Refer to our team firebase
+├── .firease.json                          # firebase JSON file
+├── .firease.indexes.json                  # firebase JSON file
+├── .firestore.rules                       # firebase rules
+├── 404.html                               # page not found 404 error
+├── index.html                             # landing HTML file, this is what users see when you come to url
+├── login.html                             # login HTML file, this what users see when you click on the user button in the footer                
+├── main.html                              # main HTML file, this is what users see after logging in
+├── parklistEDIT.html                      # parklist HTML file, this is what users see when you click on the parklist button
+├── parkDetail.html                        # parkDetail HTML file, this is what users see when you click on the park link
+├── parkrReview.html                       # parkReview HTML file, this is what users see when you click on the see parkReview icon in the parkDetail HTML                 file
+├── ratepage.html                          # parkReview HTML file, this is what users see when you click on the rate button in the parkReview HTML file                
+├── parkFacility.html                      # parkFacility HTML file, this is what users see when you click on the facility icon in the parkDetail HTML                 file
+├── parkMap.html                           # parkMap HTML file, this is what users see when you click on the map icon in the parkDetail HTML file                
+├── parkFacility_Playground.html           # parkFacility_Playground HTML file, this is what users see when you click on the playground icon in the parkFacility HTML file
+├── sort.html                              # sort HTML file, this is a obsolete file
 └── README.md
 
 
 It has the following subfolders and files:
-├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /blah.jpg                # 
-├── scripts                  # Folder for scripts
-    /blah.js                 # 
-├── styles                   # Folder for styles
-    /blah.css                # 
+├── .git                             # Folder for git repo
+├── images                           # Folder for images
+    /blah.jpg     
+    /BrentwoodPark.jpg              # BrentwoodPark image
+    /BurnabyLakeRegionalPark.jpg    # BurnabyLakeRegionalPark image
+    /BurnabyMountainParkMap.jpg     # BurnabyMountainParkMap image
+    /DeerLakePark.jpg               # DeerLakePark image
+    /MainPagePc.jpg                 # main page image
+    /MoodyPark.jpg                  # MoodyPark image
+    /rating.jpg                     # main page image
+    /RobertBunabyPark.jpg           # RobertBunabyPark image
+    ├── Burnaby Mountain Park           # Folder for Burnaby Mountain Park
+        /1.jpg                          # Burnaby mountain park image
+        /2.jpg                          # Burnaby mountain park image
+        /3.jpg                          # Burnaby mountain park image
+        /4.jpg                          # Burnaby mountain park image   
+        /5.jpg                          # Burnaby mountain park image
+        /bunaby mountain park.jpg       # Burnaby mountain park image
+        /BarnetMarinePark.jpg           # Burnaby mountain park image
+        /burnaby mountain park 1.jpg    # Burnaby mountain park image
+        /burnaby mountain park.png      # Burnaby mountain park image
+        /BurnabyMountatinPark.JPG       # Burnaby mountain park image
+        /CentennialRoseGarden.jpg       # Burnaby mountain park image
+        /HoraizonRest.JPG               # Burnaby mountain park image
+        /HoraizonRest2.JPG              # Burnaby mountain park image
+        /HoraizonRest3.JPG              # Burnaby mountain park image
+        /playground.                    # Burnaby mountain park image
+        /PlaygroundoftheGods.JPG        # Burnaby mountain park image
+    ├── CentralPark                     # Folder for Burnaby Mountain Park
+        /1.jpg                          # Central park image
+        /2.jpg                          # Central park image
+        /3.jpg                          # Central park image
+        /4.jpg                          # Central park image   
+        /5.jpg                          # Central park image
+        /CentralPark.JPG                # Central park image
+        /CentralParkMap.JPG             # Central park image
+    ├── DeerLakePark                    # Folder for Deer Lake Park
+        /1.jpg                          # Deer lake park image
+        /2.jpg                          # Deer lake park image
+        /3.jpg                          # Deer lake park image
+        /4.jpg                          # Deer lake park image   
+        /5.jpg                          # Deer lake park image
+        /DeerLakePark.JPG               # Deer lake park image
+        /DeerLakeParkMap.JPG            # Deer lake park image
+    ├── profile                         # Folder for profile image
+        /user1.jpg                      # default profile image
+├── scripts                      # Folder for scripts
+    /blah.js                     # 
+    /firebase_api_team_14        # firebase initialization js
+    /login.js                    # login page js
+    /main.js                     # main page js
+    /parkDetail.js               # parkDetail page js
+    /parkFcility.js              # parkFacility page js
+    /parkMap.js                  # parkMap page js
+    /parkRate.js                 # RatePage page js
+    /parkReview.js               # parkReview page js
+    /setUpDataBase               # firebase setup js
+    /test.js                     # "Go back" function js
+├── styles                       # Folder for styles
+    /blah.css 
+    /bootstrap.css               # bootstrap css
+    /bootstrap.css.map           # bootstrap css map file
+    /frontPageAnimation.css      # index page animation css
+    /frontPageAnimation.css.map  # index page animation css map file
+    /frontPageAnimation.scss     # index page animation scss file
+    /main.css                    # main page css
+    /navbar.css                  # obsolete
+    /parkDetail.css              # parkDetail page css
+    /parkFacility_Playground.css # parkFacility_Playground page css
+    /parkFacility_Restaurant.css # parkFacility_Restaurant page css
+    /parkFacility.css            # parkFacility page css
+    /parklist.css                # obsolete
+    /parklistEDIT.css            # parklist page css
+    /parkMap.css                 # parkMap page css
+    /parkReview.css              # parkReview page css
+    /rate.css                    # ratePage page css
+    /test.css                    # navigation bar and footer css
+
+    
 
 Firebase hosting files: 
 ├── .firebaserc...
