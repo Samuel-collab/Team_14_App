@@ -5,14 +5,17 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+This browser based web application to allow users to rate and observe ratings about a list of parks in Burnaby.
+
 	
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
-* ...
+* Firebase
+* Font awesome
+* Gibhub
 	
 ## Content
 Content of the project folder:
@@ -37,11 +40,13 @@ Firebase hosting files:
 
 
 ```
+## Reference
+Picture:
+
 
 Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
-
 
 Name: Guang Yang
 File: RatePage.html
@@ -53,7 +58,8 @@ File: RatePage.html
       parkRiew.css
       parkRate.js
       parkReview.js
-      parklist.js
+      setUpDataBase.js
+      parklist.js (part)
 
 Name: Samuel Cheon
 File: sort.html
@@ -65,3 +71,4 @@ Name: Kwanyong Jo
 File: main.html
     parkDetail.html
     parkList.html
+

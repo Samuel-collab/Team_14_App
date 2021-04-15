@@ -9,7 +9,9 @@ const parsedUrl = new URL(window.location.href);
 var id = parsedUrl.searchParams.get("id");
 
 
-// Display park information based on PARKID
+/* Display park information based on PARKID.
+ And add event listener to the "rate" button to park the PARKID to the rate page. */
+
 function getDetails() {
     db.collection("parks")
         .doc(id)
@@ -20,7 +22,6 @@ function getDetails() {
             $(".parkLink").text(name);
             $(".address").text(address);
             $("#parkimg").html("<img src= '" + doc.data().image + "' class = 'card-img-top'></img>");
-
         })
     addParkListener(id);
 }
@@ -57,7 +58,6 @@ function barSectionDisplay() {
         .doc(id)
         .get()
         .then(doc => {
-
             $("#crowdbarnum").text(doc.data().crowdedness_rate);
             $("#bathroombarnum").text(doc.data().bathroom_rate);
             $("#cleanbarnum").text(doc.data().clean_rate);
@@ -358,6 +358,7 @@ function overallIndividual(average, docid, docname) {
 function createReviewDom(docid) {
     let container = $("<div></div>");
     container.addClass("container");
+    $("#reviewDiv").prepend(container);
 
     let review = $("<div></div>");
     review.addClass("reviewHeader");
@@ -409,7 +410,7 @@ function createReviewDom(docid) {
     div2.attr("id", "comment" + docid + "");
     div2.addClass("comment");
 
-    $(".btn-primary").before(container);
+
     container.prepend(review);
     container.append(div2);
 
@@ -438,7 +439,6 @@ function displayReview(docid) {
         .doc(docid)
         .get()
         .then((doc) => {
-
             var docname = doc.data().username;
             var average = doc.data().average;
             var comment = doc.data().Comment;
@@ -446,6 +446,5 @@ function displayReview(docid) {
             overallIndividual(average, docid);
             $("#userName" + docid + "").text(docname);
             $("#comment" + docid + "").text(comment);
-
         })
 }

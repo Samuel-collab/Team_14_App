@@ -15,13 +15,12 @@
 
 body {
     font-family: Arial;
-    margin: 0 auto;
+    margin: auto;
     /* Center website */
     max-width: 800px;
     /* Max width */
     padding: 20px;
-
-    background-color: rgb(197,218,193);
+    background-color: rgb(197, 218, 193);
 }
 
 .heading {
@@ -46,12 +45,12 @@ body {
 .card {
     margin: auto;
     margin-top: 1vh;
-    background-color: rgb(197,218,193);
+    background-color: rgb(197, 218, 193);
 }
 
 .card-body {
     background-color: rgb(248, 249, 250);
-    background-color: rgb(197,218,193);
+    background-color: rgb(197, 218, 193);
 }
 
 #userrating {
@@ -116,7 +115,7 @@ body {
 .bar-container {
     width: 100%;
     margin-left: 0px;
-    background-color: rgb(222,242,200);
+    background-color: rgb(222, 242, 200);
     text-align: center;
     color: white;
 }
@@ -148,7 +147,7 @@ body {
     height: 5vh;
     margin-top: 10px;
     background-color: rgb(243, 243, 243);
-    background-color: rgb(222,242,200);
+    background-color: rgb(222, 242, 200);
 }
 
 .reviewHeader>img {
@@ -174,7 +173,7 @@ body {
     display: block;
     margin: auto;
     margin-top: 10px;
-    background-color: rgb(222,242,200);
+    background-color: rgb(222, 242, 200);
 }
 
 #userIcon {
@@ -184,16 +183,17 @@ body {
 }
 
 .container-sm {
-    background-color: rgb(222,242,200);
+    background-color: rgb(222, 242, 200);
 }
 
 .scorecard {
-    background-color: rgb(197,218,193);
+    background-color: rgb(197, 218, 193);
 }
 
 .row {
-    background-color: rgb(197,218,193);
+    background-color: rgb(197, 218, 193);
 }
+
 
 /* Responsive layout - make the columns stack on top of each other instead of next to each other */
 
@@ -207,10 +207,11 @@ body {
     }
 }
 
-#stars{
-    float:right;
+#stars {
+    float: right;
     margin-right: 10px;
 }
+
 
 /* .reviewHeader {
     height: 5vh;
@@ -230,4 +231,3 @@ body {
 .reviewHeader h5 {
     grid-column: 2/ span 1;
 } */
-

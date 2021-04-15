@@ -22,6 +22,5 @@ function readBMPname() {
             console.log("Not found");
         }
     })
-
 }
 readBMPname();

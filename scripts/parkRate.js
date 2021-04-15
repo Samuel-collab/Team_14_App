@@ -114,7 +114,7 @@ function add() {
                 score_count: firebase.firestore.FieldValue.increment(1),
             })
         console.log("done: " + title.value);
-        
+
     })
 }
 add();
