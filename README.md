@@ -22,9 +22,22 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
-├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+├── .gitignore             # Git ignore file
+├── .firebaserc            # Refer to our team firebase
+├── .firease.json          # firebase JSON file
+├── .firease.indexes.json  # firebase JSON file
+├── .firestore.rules       # firebase rules
+├── 404.html               # page not found 404 error
+├── index.html             # landing HTML file, this is what users see when you come to url
+├── login.html             # login HTML file, this what users see when you click on the user button in the footer
+├── main.html              # main HTML file, this is what users see after logging in
+├── parklistEDIT.html      # parklist HTML file, this is what users see when you click on the parklist button
+├── parkDetail.html        # parkDetail HTML file, this is what users see when you click on the park link
+├── parkrReview.html       # parkReview HTML file, this is what users see when you click on the see parkReview icon
+├── ratepage.html          # parkReview HTML file, this is what users see when you click on the  rate button
+├── parkFacility.html      # parkReview HTML file, this is what users see when you click on the see parkReview icon
 └── README.md
+
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
@@ -76,16 +89,5 @@ parklist.js
 Name: Kwanyong Jo
 File: main.html
     parkDetail.html
-<<<<<<< HEAD
     parkList.html
 
-=======
-    parklistEDIT.html
-    main.html
-    parkFacility_Playground.html
-    parkFacility_Restaurant.html
-    parkFacility.html
-    parkMap.html
-    parkList.js (Deer lake park)
-    
->>>>>>> 72c32498ead6e74236ee6b4138f3686f203f0ad7
