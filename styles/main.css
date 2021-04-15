@@ -51,14 +51,12 @@ body {
 
 
 .mainPortion {
-    /*background-color: lightgrey;*/
     background-color:rgb(255,250,251);
     background-color: rgb(222,242,200);
     width: 50%;
     margin: 3% auto;
     padding: 5% 0; 
     font-size: 3vw;
-    /* border-radius: 15px 10px 25px 5px; */
 }
 
 .mainPortion > div {
@@ -80,8 +78,7 @@ body {
 
 
 img{
-    border-radius: 25px;
-    
+    border-radius: 25px;   
 }
 a{
     text-decoration: none;
