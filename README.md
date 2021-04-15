@@ -70,4 +70,11 @@ parklist.js
 Name: Kwanyong Jo
 File: main.html
     parkDetail.html
-    parkList.html
+    parklistEDIT.html
+    main.html
+    parkFacility_Playground.html
+    parkFacility_Restaurant.html
+    parkFacility.html
+    parkMap.html
+    parkList.js (Deer lake park)
+    
