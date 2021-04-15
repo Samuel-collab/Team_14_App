@@ -71,7 +71,24 @@ It has the following subfolders and files:
         /HoraizonRest3.JPG              # Burnaby mountain park image
         /playground.                    # Burnaby mountain park image
         /PlaygroundoftheGods.JPG        # Burnaby mountain park image
-    ├── CentralPark          # Folder for Burnaby Mountain Park
+    ├── CentralPark                     # Folder for Burnaby Mountain Park
+        /1.jpg                          # Central park image
+        /2.jpg                          # Central park image
+        /3.jpg                          # Central park image
+        /4.jpg                          # Central park image   
+        /5.jpg                          # Central park image
+        /CentralPark.JPG                # Central park image
+        /CentralParkMap.JPG             # Central park image
+    ├── DeerLakePark                    # Folder for Deer Lake Park
+        /1.jpg                          # Deer lake park image
+        /2.jpg                          # Deer lake park image
+        /3.jpg                          # Deer lake park image
+        /4.jpg                          # Deer lake park image   
+        /5.jpg                          # Deer lake park image
+        /DeerLakePark.JPG               # Deer lake park image
+        /DeerLakeParkMap.JPG            # Deer lake park image
+    ├── profile                         # Folder for profile image
+        /user1.jpg                      # default profile image
 ├── scripts                      # Folder for scripts
     /blah.js                     # 
     /firebase_api_team_14        # firebase initialization js
