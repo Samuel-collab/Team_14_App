@@ -51,7 +51,7 @@
                 <p style="margin: 0 0 0 0; padding: 0 0 0 0; color:black;">Rate</p>
             </a>
         </li>
-        <li class="nav-item btn click-me disabled" data-bs-toggle="tooltip" data-bs-placement="top" title="ALARM">
+        <li class="nav-item btn click-me disabled toggle" data-bs-toggle="tooltip" data-bs-placement="top" title="ALARM">
             <a class="nav-link" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-bell-fill click-me" viewBox="0 0 16 16">
                     <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
@@ -61,29 +61,34 @@
         </li>
     </ul>
 
-    <br/> <br/> <br/>
+    <br/> <br/> <br/> <br/>
 
     <div class="container">
         <div class="top">
             <div class="topleft toppart">
-                <h1>Burnaby Mountain Park</h1>
+                <p id="parkName"></p>
+                <p class="parkinfo" id="address"></p>
+                <!-- <h1>Burnaby Mountain Park</h1>
                 <div class="parkinfo">
                     <b>Address</b> : </br>
                     100 Centennial Way</br>
                     Burnaby, BC V5A 2X9</br>
                     <b>Phone</b> : </br>
                     (604) 294-7450
-                </div>
+                </div> -->
             </div>
             <div class="topright toppart">
-                <img class="parkMap" src="images\BurnabyMountatinPark.JPG" width=100%>
+                <img id = "imageGoesHere" src="" width=100%>
+                <!-- <img class="parkMap" src="images\BurnabyMountatinPark.JPG" width=100%> -->
             </div>
         </div>
 
         <div class="body">
 
-            <div><img class="parkMap" src="images\BurnabyMountainParkMap.JPG"></div>
-            <div class="nameOfPark"></div>
+            <div class = "mapContainer">
+                <img Id = "parkMap" src="">
+            </div>
+            
 
         </div>
 
@@ -136,7 +141,7 @@
         <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./scripts/firebase_api_team_14.js"></script>
         <script src="./scripts/parkFacility.js"></script>
         <script src="./scripts/parkMap.js"></script>

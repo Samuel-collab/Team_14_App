@@ -27,9 +27,9 @@ body{
     font-size: 2rem;
 }
 
-.parkinfo {
+/* .parkinfo {
     margin-left: 25%;
-}
+} */
 
 .body{
     width:90%;
@@ -56,8 +56,19 @@ body{
   }
 
 .parkMap {
-    width:80%;
+    width: 100%;
+    height: 100%
 }
 .nameOfPark{
     font-size: 3rem;
+}
+
+.mapContainer {
+    height: 250px;
+    width: 100%;
+}
+
+#parkMap {
+    width: 100%;
+    height: 100%
 }

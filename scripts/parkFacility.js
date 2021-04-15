@@ -23,4 +23,48 @@ function readBMPname() {
         }
     })
 }
+<<<<<<< HEAD
 readBMPname();
+=======
+readBMPname();
+
+// https://some.site/?id=ParkID
+const parsedUrl = new URL(window.location.href);
+// extract id from url, assign to variable
+var id = parsedUrl.searchParams.get("id");
+
+// Display park information based on PARKID
+function getDetails() {
+    db.collection("parks")
+        .doc(id)
+        .get()
+        .then(function(doc) {
+            var name = doc.data().name;
+            var address = doc.data().address;
+            $("#parkName").text(name);
+            $("#address").text("Address: " + address);
+            // addParkListener(id);
+            // addParkListenerFacility(id)
+
+            $("#imageGoesHere").attr("src", doc.data().carousel[0]);
+
+            addFacilityInfo(doc);
+
+            console.log(id);
+        })
+}
+getDetails();
+
+function addFacilityInfo(docID) {
+    for (var i = 0; i < 6; i++) {
+        var temp = "#facility" + (i + 1);
+        $(temp).text(docID.data().facility[i]);
+    }
+    for (var i = 0; i < 6; i++) {
+        var temp = "#facility" + (i + 1);
+        if ($(temp).text() == "Button") {
+            $(temp).remove();
+        }
+    }
+}
+>>>>>>> 72c32498ead6e74236ee6b4138f3686f203f0ad7

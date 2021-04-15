@@ -63,12 +63,29 @@ File: RatePage.html
 
 Name: Samuel Cheon
 File: sort.html
-login.html
+login.html (functionality) --> (add unqiue message for login user)
+main.js
+test.js
+facility.js
+parkMap.js
+parkDetail.html (made facility, parkmap, and how-to-go change based on url)
 navbar and footer in each file
- parklist.js
+parklist.js
+
 
 Name: Kwanyong Jo
 File: main.html
     parkDetail.html
+<<<<<<< HEAD
     parkList.html
 
+=======
+    parklistEDIT.html
+    main.html
+    parkFacility_Playground.html
+    parkFacility_Restaurant.html
+    parkFacility.html
+    parkMap.html
+    parkList.js (Deer lake park)
+    
+>>>>>>> 72c32498ead6e74236ee6b4138f3686f203f0ad7
