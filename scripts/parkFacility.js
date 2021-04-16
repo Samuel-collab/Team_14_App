@@ -63,4 +63,8 @@ function addFacilityInfo(docID) {
             $(temp).remove();
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4cc8420b4729b6e43b805b6328f3a01b5415aad4

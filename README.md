@@ -22,6 +22,14 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
+├── .firebase
+├── .vscode
+├── bootstrap
+├── Carly notes
+├── fonts
+├── images
+├── scripts
+├── styles
 ├── .gitignore                             # Git ignore file
 ├── .firebaserc                            # Refer to our team firebase
 ├── .firease.json                          # firebase JSON file
@@ -33,7 +41,7 @@ Content of the project folder:
 ├── main.html                              # main HTML file, this is what users see after logging in
 ├── parklistEDIT.html                      # parklist HTML file, this is what users see when you click on the parklist button
 ├── parkDetail.html                        # parkDetail HTML file, this is what users see when you click on the park link
-├── parkrReview.html                       # parkReview HTML file, this is what users see when you click on the see parkReview icon in the parkDetail HTML                 file
+├── parkrReview.html                       # parkReview HTML file, this is what users see when you click on the see parkReview icon in the  parkDetail HTML file  
 ├── ratepage.html                          # parkReview HTML file, this is what users see when you click on the rate button in the parkReview HTML file                
 ├── parkFacility.html                      # parkFacility HTML file, this is what users see when you click on the facility icon in the parkDetail HTML                 file
 ├── parkMap.html                           # parkMap HTML file, this is what users see when you click on the map icon in the parkDetail HTML file                
@@ -43,6 +51,45 @@ Content of the project folder:
 
 
 It has the following subfolders and files:
+├── .firebase
+    /hosting..cache
+├── .vscode
+    /settings.json
+├── bootstrap
+    ├── bootstrap-5.0.0-beta2-dist
+        ├── css
+        ├── js
+    /bootstrap-5.0.0-beta2-dist.zip
+├── Carly notes
+    /March 31 notes.txt
+    /team 14 discussion.docx
+├── fonts
+    ├── demo-files
+        /demo.css 
+        /demo.js
+    ├── navbar
+        ├── demo-files
+            /demo.css
+            /demo.js
+        ├── fonts
+            /icomoon.eot
+            /icomoon.svg
+            /icomoon.ttf
+            /ixomoon.woff
+        /demo.html
+        /icomoon.zip
+        /Read Me.txt
+        /selection.json
+        /style.css
+    /demo.html
+    /icomoon.eot
+    /icomoon.svg
+    /icomoon.ttf
+    /icomoon.woff
+    /Read me.txt
+    /selection.json
+    /style.css
+
 ├── .git                             # Folder for git repo
 ├── images                           # Folder for images
     /blah.jpg     
@@ -180,6 +227,12 @@ parklist.js
 
 Name: Kwanyong Jo
 File: main.html
-    parkDetail.html
-    parkList.html
+    park_detail.html
+    parklistEDIT.html
+    main.html
+    parkFacility_Playground.html
+    parkFacility_Restaurant.html
+    parkFacility.html
+    parkMap.html
+    parkList.js (Deer lake park)
 

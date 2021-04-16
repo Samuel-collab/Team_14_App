@@ -1,9 +1,3 @@
-// Go back to previus page
-function goBack() {
-    window.history.back();
-}
-
-
 // https://some.site/?id=ParkID
 const parsedUrl = new URL(window.location.href);
 // extract id from url, assign to variable
@@ -34,7 +28,7 @@ getDetails();
 
 
 
-// Add event listener for"see the parkReview" and add PARKID in the url
+// Add event listener for "see the parkReview" and add PARKID in the url
 function addParkListener(id) {
     console.log(id);
     var a = document.getElementById("gotoreview");
@@ -71,11 +65,6 @@ function addParkListenerParkMap(id) {
         });
     }
 }
-
-
-
-
-
 
 
 
