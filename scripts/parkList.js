@@ -153,51 +153,6 @@ function addParkListener3(id) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////////////////////////////////////////////////////////////////////////////////////
-//*******Putting park elements onto the page, and changing its order based on sort */
-// var increm = 1;
-
-// function addParks() {
-//     db.collection("parks").get().then(function(snap) {
-//         snap.forEach(function(doc) {
-//             console.log(increm);
-//             var id = "park" + increm;
-//             increm = increm + 1;
-//             var listKey = doc.data().listKey;
-
-//             var name = "";
-//             name = doc.data().name;
-//             var image = "";
-//             image = doc.data().image;
-//             var newDom = "<div class='text'><a class='" + listKey + "' href='' target='_blank'>" + name + "</a></div><div class = 'image image1><a class= '" + listKey + "' href='parklistEDIT.html' target='_blank'><img src= '" + image + "' width=100% height = 100%></a></div>";
-
-//             document.getElementById(id).innerHTML = newDom;
-
-//             console.log(doc.data());
-//         })
-//     })
-// }
-
-
 ////////////////////////////////////////////////////////////////////////////////////
 //*******Second attempt at sort feature - these time using id mainpulation *******//
 ////////////////////////////////////////////////////////////////////////////////////
@@ -208,6 +163,7 @@ function addListenerCleanliness() {
 }
 addListenerCleanliness();
 
+//doThis() function's changes park items on parklist to be displayed with a different order
 function doThis() {
     var incre = 1;
     db.collection("parks").orderBy("clean_rate", "desc")

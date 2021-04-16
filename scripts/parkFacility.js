@@ -23,9 +23,6 @@ function readBMPname() {
         }
     })
 }
-<<<<<<< HEAD
-readBMPname();
-=======
 readBMPname();
 
 // https://some.site/?id=ParkID
@@ -67,4 +64,3 @@ function addFacilityInfo(docID) {
         }
     }
 }
->>>>>>> 72c32498ead6e74236ee6b4138f3686f203f0ad7

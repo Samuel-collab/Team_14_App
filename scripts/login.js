@@ -58,17 +58,14 @@ var uiConfig = {
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
 
-function addWebcamListener(id) {
-    document.getElementById(id)
-        .addEventListener("click", function() {
-            console.log(id + "was clicked!")
-                //window.location.href="details.html";
-            window.location.href = "details.html?id=" + id;
-        });
-}
-
-
-
+// function addWebcamListener(id) {
+//     document.getElementById(id)
+//         .addEventListener("click", function() {
+//             console.log(id + "was clicked!")
+//                 //window.location.href="details.html";
+//             window.location.href = "details.html?id=" + id;
+//         });
+// }
 
 
 function sayHello() {
