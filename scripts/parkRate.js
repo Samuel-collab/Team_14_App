@@ -44,14 +44,14 @@ function getDetails() {
 }
 getDetails();
 
-// Rating score of Crowdedness.
+// After users rating the crowdedness, get this value.
 var r1 = 0;
 $('.rating1 input').click((function() {
     r1 = $(this).val();
     console.log("r1:" + r1);
 }));
 
-// Rating score of bathroom.
+// After users rating the bathroom, get this value.
 var r2 = 0;
 $('.rating2 input').click((function() {
 
@@ -59,7 +59,7 @@ $('.rating2 input').click((function() {
     console.log("r2:" + r2);
 }));
 
-// Rating score of cleaness.
+// After users rating the cleaness, get this value.
 var r3 = 0;
 $('.rating3 input').click((function() {
 
@@ -67,7 +67,7 @@ $('.rating3 input').click((function() {
     console.log("r3:" + r3);
 }));
 
-// Rating score of parkling lot.
+// After users rating the parking lot, get this value.
 var r4 = 0;
 $('.rating4 input').click((function() {
 
@@ -76,7 +76,7 @@ $('.rating4 input').click((function() {
 
 }));
 
-// Round the number to 0.5 or integer.
+// Round the number to 0.5 or to the integer.
 function roundHalf(num) {
     return Math.round(num * 2) / 2;
 }
@@ -91,7 +91,7 @@ function add() {
         var aver = roundHalf(total / 4);
         console.log("total:" + total);
         console.log("average:" + aver);
-        //Save individual review into rating collection, which is a subcollection of the user document.
+        //Save individual review into reviews collection, which is a subcollection of each park document.
         db.collection("parks")
             .doc(id)
             .collection("reviews")
@@ -121,7 +121,7 @@ add();
 
 
 
-// Get update rating total, count and average for each rating item.
+// Get updated rating total and count for each rating criterion, and then calcualte the averages.
 function caculateRating() {
     db.collection("parks")
         .doc(id)
@@ -185,8 +185,6 @@ function addEventListenerToRatingSave() {
     })
 }
 addEventListenerToRatingSave();
-
-//setFieldToZero();
 
 // If there is no review, set the count, total and rate of each item to 0.
 function getFieldBackToZero() {

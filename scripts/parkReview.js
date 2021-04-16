@@ -52,7 +52,8 @@ function overallRating() {
 }
 overallRating();
 
-// Bar section display based on the database.
+/* Bar section display based on the database.
+ Read the average score for each rating criterion */
 function barSectionDisplay() {
     db.collection("parks")
         .doc(id)
@@ -71,7 +72,10 @@ function barSectionDisplay() {
 }
 barSectionDisplay();
 
-// Bar length.
+/* Progresstive bar to show the average score for each rating criterion.
+There fours bars for four criteria.
+Each progresstive bar are divided by 10 parts, 
+1 point means 10 %, 1.5 means 20 %, 2 means 30 % ... */
 function barLength(whichbar, rating) {
     if (whichbar == "crowdedness") {
         switch (rating) {
@@ -217,7 +221,12 @@ function barLength(whichbar, rating) {
 }
 
 
-// Display overtall rating star for a park based on score
+/* Display stars based on average rating for a park.
+Add class or attrubute to manipulate the star display:
+checked shows a full star
+fa-star-half-o shows half star
+aria-hidden: true black out the star
+*/
 function overall(score) {
     switch (score) {
         case 0.5:
@@ -354,8 +363,10 @@ function overallIndividual(average, docid, docname) {
     }
 }
 
-// Create review DOM.
+//Create review DOM after users submitting their comments.
+
 function createReviewDom(docid) {
+    // the container for the comment
     let container = $("<div></div>");
     container.addClass("container");
     $("#reviewDiv").prepend(container);
@@ -363,16 +374,19 @@ function createReviewDom(docid) {
     let review = $("<div></div>");
     review.addClass("reviewHeader");
 
+    // profile image
     let img = $("<img id = 'userIcon'></img>");
     img.attr("src", "./images/profile/user1.jpg");
     review.append(img)
 
+    // user name
     let h5 = $("<h5></h5>");
     let span = $("<span></span>")
     span.attr("id", "userName" + docid + "");
     h5.append(span);
     review.append(h5);
 
+    // stars for user rating
     let stars = $("<span id = 'stars'><span>");
     h5.after(stars);
 
@@ -406,17 +420,17 @@ function createReviewDom(docid) {
     stars.append(star5);
     // star4.after(star5);
 
+    // comment
     let div2 = $("<div></div>");
     div2.attr("id", "comment" + docid + "");
     div2.addClass("comment");
-
 
     container.prepend(review);
     container.append(div2);
 
 }
 
-// Get DocId from Subcollection
+// Get DocId from Subcollection "reviews", and pass it to displayRevew().
 function getDocIdfromSubcollection() {
     db.collection("parks")
         .doc(id)
@@ -431,7 +445,8 @@ function getDocIdfromSubcollection() {
 }
 getDocIdfromSubcollection();
 
-// Display Reviews
+/*  Get the review from the database, invoke the function to 
+create the DOM first and display the reviews there. */
 function displayReview(docid) {
     db.collection("parks")
         .doc(id)
